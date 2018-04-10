@@ -10,6 +10,7 @@ namespace EzSystems\Tests\EzPlatformLegacyStorageEngine\Persistence\Content\Fiel
 
 use eZ\Publish\SPI\Persistence\Content\FieldValue;
 use eZ\Publish\Core\FieldType\RelationList\Type;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\RelationListConverter;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition as PersistenceFieldDefinition;
@@ -30,7 +31,7 @@ class RelationListTest extends TestCase
     {
         parent::setUp();
         $this->converter = $this
-            ->getMockBuilder('eZ\\Publish\\Core\\Persistence\\Legacy\\Content\\FieldValue\\Converter\\RelationListConverter')
+            ->getMockBuilder(RelationListConverter::class)
             ->disableOriginalConstructor()
             ->setMethods(array('getRelationXmlHashFromDB'))
             ->getMock();

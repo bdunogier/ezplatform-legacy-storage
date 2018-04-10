@@ -24,6 +24,10 @@ use eZ\Publish\SPI\Persistence\User\Handler as SPIUserHandler;
 use eZ\Publish\SPI\Persistence\Content\Section\Handler as SPISectionHandler;
 use eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler as SPIUrlAliasHandler;
 use eZ\Publish\SPI\Persistence\TransactionHandler as SPITransactionHandler;
+use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\Compiler\Storage\Legacy\FieldValueConverterRegistryPass;
+use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\Compiler\Storage\Legacy\RoleLimitationConverterPass;
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
  * Test case for Repository Handler.
@@ -280,14 +284,19 @@ class HandlerTest extends TestCase
     protected function getContainer()
     {
         if (!isset(self::$container)) {
-            $config = include __DIR__ . '/../../../../../../config.php';
+            $config = include __DIR__ . '/../../config.php';
             $installDir = $config['install_dir'];
 
             /** @var \Symfony\Component\DependencyInjection\ContainerBuilder $containerBuilder */
             $containerBuilder = include $config['container_builder_path'];
 
             /* @var \Symfony\Component\DependencyInjection\Loader\YamlFileLoader $loader */
-            $loader->load('search_engines/legacy.yml');
+            $loader = new YamlFileLoader($containerBuilder, new FileLocator(__DIR__ . '/../../../src/lib/settings'));
+            $loader->load('storage_engines/legacy.yml');
+            $loader->load('storage_engines/common.yml');
+
+            $containerBuilder->addCompilerPass(new FieldValueConverterRegistryPass());
+            $containerBuilder->addCompilerPass(new RoleLimitationConverterPass());
 
             $containerBuilder->setParameter(
                 'languages',

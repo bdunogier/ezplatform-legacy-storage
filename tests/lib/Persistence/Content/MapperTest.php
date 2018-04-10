@@ -236,7 +236,7 @@ class MapperTest extends LanguageAwareTestCase
         $reg = new Registry(
             array(
                 'ezstring' => $convMock,
-                'ezrichtext' => $convMock,
+                // 'ezrichtext' => $convMock,
                 'ezdatetime' => $convMock,
             )
         );

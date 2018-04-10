@@ -68,11 +68,6 @@ services:
         tags:
             - {name: ezpublish.storageEngine.legacy.converter, alias: eztext}
 
-    ezpublish.fieldType.ezrichtext.converter:
-        class: "%ezpublish.fieldType.ezrichtext.converter.class%"
-        tags:
-            - {name: ezpublish.storageEngine.legacy.converter, alias: ezrichtext}
-
     ezpublish.fieldType.ezsrrating.converter:
         class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\RatingConverter
         tags:

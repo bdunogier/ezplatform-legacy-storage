@@ -1,6 +1,6 @@
 <?php
 
-namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine\Tests;
+namespace EzSystems\Tests\EzPlatformLegacyStorageEngine\Doctrine;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Doctrine\DBAL\DriverManager;

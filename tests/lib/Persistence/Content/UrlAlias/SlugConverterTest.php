@@ -189,7 +189,7 @@ class SlugConverterTest extends TestCase
     public function testCleanupText($text, $method, $expected)
     {
         $testMethod = new \ReflectionMethod(
-            '\EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\SlugConverter',
+            SlugConverter::class,
             'cleanupText'
         );
         $testMethod->setAccessible(true);
@@ -240,10 +240,10 @@ class SlugConverterTest extends TestCase
                 new Utf8Converter()
             ),
             [
-                __DIR__ . '../../../../../Tests/TransformationProcessor/_fixtures/transformations/ascii.tr.result',
-                __DIR__ . '../../../../../Tests/TransformationProcessor/_fixtures/transformations/basic.tr.result',
-                __DIR__ . '../../../../../Tests/TransformationProcessor/_fixtures/transformations/latin.tr.result',
-                __DIR__ . '../../../../../Tests/TransformationProcessor/_fixtures/transformations/search.tr.result',
+                __DIR__ . '/../../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Persistence/Tests/TransformationProcessor/_fixtures/transformations/ascii.tr.result',
+                __DIR__ . '/../../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Persistence/Tests/TransformationProcessor/_fixtures/transformations/basic.tr.result',
+                __DIR__ . '/../../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Persistence/Tests/TransformationProcessor/_fixtures/transformations/latin.tr.result',
+                __DIR__ . '/../../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Persistence/Tests/TransformationProcessor/_fixtures/transformations/search.tr.result',
             ]
         );
         $slugConverter = new SlugConverter($transformationProcessor);

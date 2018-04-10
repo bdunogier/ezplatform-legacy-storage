@@ -1,6 +1,6 @@
 <?php
 
-namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine\Tests;
+namespace EzSystems\Tests\EzPlatformLegacyStorageEngine\Doctrine;
 
 use EzSystems\EzPlatformLegacyStorageEngine\Doctrine\DoctrineExpression;
 

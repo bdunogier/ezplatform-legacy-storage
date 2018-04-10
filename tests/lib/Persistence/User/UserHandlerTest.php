@@ -536,7 +536,7 @@ class UserHandlerTest extends TestCase
 
     public function testDeleteRole()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
 
         // 3 is the ID of Editor role
@@ -563,7 +563,7 @@ class UserHandlerTest extends TestCase
 
     public function testDeleteRoleDraft()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
 
         // 3 is the ID of Editor role
@@ -913,7 +913,7 @@ class UserHandlerTest extends TestCase
 
     public function testLoadPoliciesForUser()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
 
         $policies = $handler->loadPoliciesByUserId(10); // Anonymous user
@@ -938,7 +938,7 @@ class UserHandlerTest extends TestCase
 
     public function testLoadRoleAssignmentsByGroupId()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
 
         $this->assertEquals(
@@ -982,7 +982,7 @@ class UserHandlerTest extends TestCase
 
     public function testLoadRoleAssignmentsByGroupIdInherited()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
 
         $this->assertEquals(
@@ -1001,7 +1001,7 @@ class UserHandlerTest extends TestCase
 
     public function testLoadComplexRoleAssignments()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
 
         $this->assertEquals(
@@ -1069,7 +1069,7 @@ class UserHandlerTest extends TestCase
 
     public function testLoadRoleAssignmentsByRoleId()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
 
         $this->assertEquals(
@@ -1102,7 +1102,7 @@ class UserHandlerTest extends TestCase
 
     public function testLoadRoleDraftByRoleId()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
 
         // 3 is the ID of Editor role
@@ -1115,7 +1115,7 @@ class UserHandlerTest extends TestCase
 
     public function testRoleDraftOnlyHavePolicyDraft()
     {
-        $this->insertDatabaseFixture(__DIR__ . '/../../../../Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
+        $this->insertDatabaseFixture(__DIR__ . '/../../../../vendor/ezsystems/ezpublish-kernel/eZ/Publish/Core/Repository/Tests/Service/Integration/Legacy/_fixtures/clean_ezdemo_47_dump.php');
         $handler = $this->getUserHandler();
         $originalRoleId = 3;
         $originalRole = $handler->loadRole($originalRoleId);

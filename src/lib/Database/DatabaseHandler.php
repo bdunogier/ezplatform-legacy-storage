@@ -8,7 +8,7 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Database;
 
-use eZ\Publish\Core\Persistence\Legacy\EzcDbHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\EzcDbHandler;
 
 /**
  * Interface for relational database abstractions supported by eZ.

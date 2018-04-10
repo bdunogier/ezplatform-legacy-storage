@@ -37,14 +37,14 @@ services:
     # Compiler pass will alias 'ezpublish.api.storage_engine.legacy.connection' service to the StorageConnectionFactory
     ezpublish.api.storage_engine.legacy.dbhandler:
         class: EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler
-        factory: "%ezpublish.api.storage_engine.legacy.dbhandler.class%::createFromConnection"
+        factory: EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler::createFromConnection
         arguments:
             - "@ezpublish.api.storage_engine.legacy.connection"
         lazy: true
 
     ezpublish.api.storage_engine.legacy.connection:
         class: Doctrine\DBAL\Connection
-        factory: "%ezpublish.api.storage_engine.legacy.dbhandler.class%::createConnectionFromDSN"
+        factory: EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler::createConnectionFromDSN
         arguments:
             - "%legacy_dsn%"
 
