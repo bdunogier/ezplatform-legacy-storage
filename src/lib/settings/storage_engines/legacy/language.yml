@@ -1,20 +1,11 @@
-parameters:
-    ezpublish.spi.persistence.legacy.language.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Handler
-    ezpublish.spi.persistence.legacy.language.handler.caching.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\CachingHandler
-    ezpublish.persistence.legacy.language.cache.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Cache
-    ezpublish.persistence.legacy.language.mapper.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Mapper
-    ezpublish.persistence.legacy.language.gateway.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.language.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Gateway\ExceptionConversion
-    ezpublish.persistence.legacy.language.mask_generator.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator
-
 services:
     ezpublish.persistence.legacy.language.gateway.inner:
-        class: "%ezpublish.persistence.legacy.language.gateway.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Gateway\DoctrineDatabase
         arguments:
             - "@ezpublish.api.storage_engine.legacy.dbhandler"
 
     ezpublish.persistence.legacy.language.gateway.exception_conversion:
-        class: "%ezpublish.persistence.legacy.language.gateway.exception_conversion.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Gateway\ExceptionConversion
         arguments:
             - "@ezpublish.persistence.legacy.language.gateway.inner"
 
@@ -23,19 +14,19 @@ services:
         alias: ezpublish.persistence.legacy.language.gateway.exception_conversion
 
     ezpublish.persistence.legacy.language.mapper:
-        class: "%ezpublish.persistence.legacy.language.mapper.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Mapper
 
     ezpublish.spi.persistence.legacy.language.handler.inner:
-        class: "%ezpublish.spi.persistence.legacy.language.handler.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Handler
         arguments:
             - "@ezpublish.persistence.legacy.language.gateway"
             - "@ezpublish.persistence.legacy.language.mapper"
 
     ezpublish.persistence.legacy.language.cache:
-        class: "%ezpublish.persistence.legacy.language.cache.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Cache
 
     ezpublish.spi.persistence.legacy.language.handler.caching:
-        class: "%ezpublish.spi.persistence.legacy.language.handler.caching.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\CachingHandler
         lazy: true
         arguments:
             - "@ezpublish.spi.persistence.legacy.language.handler.inner"
@@ -45,5 +36,5 @@ services:
         alias: ezpublish.spi.persistence.legacy.language.handler.caching
 
     ezpublish.persistence.legacy.language.mask_generator:
-        class: "%ezpublish.persistence.legacy.language.mask_generator.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator
         arguments: ["@ezpublish.spi.persistence.legacy.language.handler"]

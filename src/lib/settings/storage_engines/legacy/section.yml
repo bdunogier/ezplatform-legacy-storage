@@ -1,16 +1,11 @@
-parameters:
-    ezpublish.spi.persistence.legacy.section.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Handler
-    ezpublish.persistence.legacy.section.gateway.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.section.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway\ExceptionConversion
-
 services:
     ezpublish.persistence.legacy.section.gateway.inner:
-        class: "%ezpublish.persistence.legacy.section.gateway.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway\DoctrineDatabase
         arguments:
             - "@ezpublish.api.storage_engine.legacy.dbhandler"
 
     ezpublish.persistence.legacy.section.gateway.exception_conversion:
-        class: "%ezpublish.persistence.legacy.section.gateway.exception_conversion.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway\ExceptionConversion
         arguments:
             - "@ezpublish.persistence.legacy.section.gateway.inner"
 
@@ -19,7 +14,7 @@ services:
         alias: ezpublish.persistence.legacy.section.gateway.exception_conversion
 
     ezpublish.spi.persistence.legacy.section.handler:
-        class: "%ezpublish.spi.persistence.legacy.section.handler.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Handler
         arguments:
             - "@ezpublish.persistence.legacy.section.gateway"
         lazy: true

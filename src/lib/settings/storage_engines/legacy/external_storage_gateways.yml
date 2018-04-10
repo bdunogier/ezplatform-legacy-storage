@@ -8,41 +8,35 @@ services:
                 connection: "@ezpublish.api.storage_engine.legacy.dbhandler"
 
     ezpublish.fieldType.ezbinaryfile.storage_gateway:
-        class: eZ\Publish\Core\FieldType\BinaryFile\BinaryFileStorage\Gateway\DoctrineStorage
+        class: EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage\BinaryFile
         arguments: ["@ezpublish.api.storage_engine.legacy.connection"]
 
     ezpublish.fieldType.ezkeyword.storage_gateway:
-        class: eZ\Publish\Core\FieldType\Keyword\KeywordStorage\Gateway\DoctrineStorage
+        class: EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage\Keyword
         arguments: ["@ezpublish.api.storage_engine.legacy.connection"]
 
     ezpublish.fieldType.ezmedia.storage_gateway:
-        class: eZ\Publish\Core\FieldType\Media\MediaStorage\Gateway\DoctrineStorage
+        class: EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage\Media
         arguments: ["@ezpublish.api.storage_engine.legacy.connection"]
 
-    ezpublish.fieldType.ezrichtext.storage_gateway:
-        class: eZ\Publish\Core\FieldType\RichText\RichTextStorage\Gateway\DoctrineStorage
-        arguments:
-            - "@ezpublish.fieldType.ezurl.storage_gateway"
-            - "@ezpublish.api.storage_engine.legacy.connection"
-
     ezpublish.fieldType.ezurl.storage_gateway:
-        class: eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway\DoctrineStorage
+        class: EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage\Url
         arguments: ["@ezpublish.api.storage_engine.legacy.connection"]
 
     ezpublish.fieldType.ezpage.storage_gateway:
-        class: eZ\Publish\Core\FieldType\Page\PageStorage\Gateway\DoctrineStorage
+        class: EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage\Page
         arguments: ["@ezpublish.api.storage_engine.legacy.connection"]
 
     ezpublish.fieldType.ezimage.storage_gateway:
-        class: eZ\Publish\Core\FieldType\Image\ImageStorage\Gateway\DoctrineStorage
+        class: EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage\Image
         arguments:
             - "@ezpublish.core.io.image_fieldtype.legacy_url_redecorator"
             - "@ezpublish.api.storage_engine.legacy.connection"
 
     ezpublish.fieldType.externalStorageHandler.ezgmaplocation.gateway:
-        class: eZ\Publish\Core\FieldType\MapLocation\MapLocationStorage\Gateway\DoctrineStorage
+        class: EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage\MapLocation
         arguments: ["@ezpublish.api.storage_engine.legacy.connection"]
 
     ezpublish.fieldType.ezuser.storage_gateway:
-        class: eZ\Publish\Core\FieldType\User\UserStorage\Gateway\DoctrineStorage
+        class: EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage\User
         arguments: ["@ezpublish.api.storage_engine.legacy.connection"]

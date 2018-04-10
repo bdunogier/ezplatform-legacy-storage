@@ -1,19 +1,12 @@
-parameters:
-    ezpublish.persistence.legacy.url.gateway.inner.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.url.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway\ExceptionConversion
-    ezpublish.persistence.legacy.url.mapper.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Mapper
-    ezpublish.spi.persistence.legacy.url.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Handler
-    ezpublish.spi.persistence.legacy.url.criterion_converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter
-
 services:
     ezpublish.persistence.legacy.url.gateway.inner:
-        class: '%ezpublish.persistence.legacy.url.gateway.inner.class%'
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway\DoctrineDatabase
         arguments:
             - '@ezpublish.api.storage_engine.legacy.dbhandler'
             - '@ezpublish.spi.persistence.legacy.url.criterion_converter'
 
     ezpublish.persistence.legacy.url.gateway.exception_conversion:
-        class: '%ezpublish.persistence.legacy.url.gateway.exception_conversion.class%'
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway\ExceptionConversion
         arguments:
             - '@ezpublish.persistence.legacy.url.gateway.inner'
 
@@ -22,16 +15,16 @@ services:
         alias: ezpublish.persistence.legacy.url.gateway.exception_conversion
 
     ezpublish.persistence.legacy.url.mapper:
-        class: '%ezpublish.persistence.legacy.url.mapper.class%'
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Mapper
 
     ezpublish.spi.persistence.legacy.url.handler:
-        class: '%ezpublish.spi.persistence.legacy.url.handler.class%'
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Handler
         arguments:
             - "@ezpublish.persistence.legacy.url.gateway"
             - "@ezpublish.persistence.legacy.url.mapper"
         lazy: true
 
     ezpublish.spi.persistence.legacy.url.criterion_converter:
-        class: '%ezpublish.spi.persistence.legacy.url.criterion_converter.class%'
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter
 
 

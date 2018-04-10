@@ -1,13 +1,3 @@
-parameters:
-    ezpublish.persistence.legacy.url.criterion_handler.logical_and.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\LogicalAnd
-    ezpublish.persistence.legacy.url.criterion_handler.logical_not.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\LogicalNot
-    ezpublish.persistence.legacy.url.criterion_handler.logical_or.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\LogicalOr
-    ezpublish.persistence.legacy.url.criterion_handler.match_all.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\MatchAll
-    ezpublish.persistence.legacy.url.criterion_handler.match_none.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\MatchNone
-    ezpublish.persistence.legacy.url.criterion_handler.validity.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\Validity
-    ezpublish.persistence.legacy.url.criterion_handler.pattern.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\Pattern
-    ezpublish.persistence.legacy.url.criterion_handler.visible_only.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\VisibleOnly
-
 services:
    ezpublish.persistence.legacy.url.criterion_handler.base:
         abstract: true
@@ -15,48 +5,48 @@ services:
 
    ezpublish.persistence.legacy.url.criterion_handler.logical_and:
        parent: ezpublish.persistence.legacy.url.criterion_handler.base
-       class: '%ezpublish.persistence.legacy.url.criterion_handler.logical_and.class%'
+       class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\LogicalAnd
        tags:
            - { name: ezpublish.persistence.legacy.url.criterion_handler }
 
    ezpublish.persistence.legacy.url.criterion_handler.logical_or:
        parent: ezpublish.persistence.legacy.url.criterion_handler.base
-       class: '%ezpublish.persistence.legacy.url.criterion_handler.logical_or.class%'
+       class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\LogicalOr
        tags:
            - { name: ezpublish.persistence.legacy.url.criterion_handler }
 
    ezpublish.persistence.legacy.url.criterion_handler.logical_not:
        parent: ezpublish.persistence.legacy.url.criterion_handler.base
-       class: '%ezpublish.persistence.legacy.url.criterion_handler.logical_not.class%'
+       class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\LogicalNot
        tags:
            - { name: ezpublish.persistence.legacy.url.criterion_handler }
 
    ezpublish.persistence.legacy.url.criterion_handler.match_all:
        parent: ezpublish.persistence.legacy.url.criterion_handler.base
-       class: '%ezpublish.persistence.legacy.url.criterion_handler.match_all.class%'
+       class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\MatchAll
        tags:
            - { name: ezpublish.persistence.legacy.url.criterion_handler }
 
    ezpublish.persistence.legacy.url.criterion_handler.match_none:
        parent: ezpublish.persistence.legacy.url.criterion_handler.base
-       class: '%ezpublish.persistence.legacy.url.criterion_handler.match_none.class%'
+       class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\MatchNone
        tags:
            - { name: ezpublish.persistence.legacy.url.criterion_handler }
 
    ezpublish.persistence.legacy.url.criterion_handler.validity:
        parent: ezpublish.persistence.legacy.url.criterion_handler.base
-       class: '%ezpublish.persistence.legacy.url.criterion_handler.validity.class%'
+       class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\Validity
        tags:
            - { name: ezpublish.persistence.legacy.url.criterion_handler }
 
    ezpublish.persistence.legacy.url.criterion_handler.pattern:
        parent: ezpublish.persistence.legacy.url.criterion_handler.base
-       class: '%ezpublish.persistence.legacy.url.criterion_handler.pattern.class%'
+       class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\Pattern
        tags:
            - { name: ezpublish.persistence.legacy.url.criterion_handler }
 
    ezpublish.persistence.legacy.url.criterion_handler.visible_only:
        parent: ezpublish.persistence.legacy.url.criterion_handler.base
-       class: '%ezpublish.persistence.legacy.url.criterion_handler.visible_only.class%'
+       class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\VisibleOnly
        tags:
            - { name: ezpublish.persistence.legacy.url.criterion_handler }

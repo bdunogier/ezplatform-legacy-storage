@@ -1,18 +1,12 @@
-parameters:
-    ezpublish.spi.persistence.legacy.url_alias.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Handler
-    ezpublish.persistence.legacy.url_alias.mapper.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Mapper
-    ezpublish.persistence.legacy.url_alias.gateway.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.url_alias.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway\ExceptionConversion
-
 services:
     ezpublish.persistence.legacy.url_alias.gateway.inner:
-        class: "%ezpublish.persistence.legacy.url_alias.gateway.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway\DoctrineDatabase
         arguments:
             - "@ezpublish.api.storage_engine.legacy.dbhandler"
             - "@ezpublish.persistence.legacy.language.mask_generator"
 
     ezpublish.persistence.legacy.url_alias.gateway.exception_conversion:
-        class: "%ezpublish.persistence.legacy.url_alias.gateway.exception_conversion.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway\ExceptionConversion
         arguments:
             - "@ezpublish.persistence.legacy.url_alias.gateway.inner"
 
@@ -21,12 +15,12 @@ services:
         alias: ezpublish.persistence.legacy.url_alias.gateway.exception_conversion
 
     ezpublish.persistence.legacy.url_alias.mapper:
-        class: "%ezpublish.persistence.legacy.url_alias.mapper.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Mapper
         arguments:
             - "@ezpublish.persistence.legacy.language.mask_generator"
 
     ezpublish.spi.persistence.legacy.url_alias.handler:
-        class: "%ezpublish.spi.persistence.legacy.url_alias.handler.class%"
+        class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Handler
         arguments:
             - "@ezpublish.persistence.legacy.url_alias.gateway"
             - "@ezpublish.persistence.legacy.url_alias.mapper"
