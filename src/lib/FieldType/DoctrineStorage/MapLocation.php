@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\FieldType\MapLocation\MapLocationStorage\Gateway;
+namespace EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
 use Doctrine\DBAL\Connection;
 use eZ\Publish\Core\FieldType\MapLocation\MapLocationStorage\Gateway;
@@ -14,7 +14,7 @@ use eZ\Publish\SPI\Persistence\Content\Field;
 use eZ\Publish\SPI\Persistence\Content\VersionInfo;
 use PDO;
 
-class DoctrineStorage extends Gateway
+class MapLocation extends Gateway
 {
     const MAP_LOCATION_TABLE = 'ezgmaplocation';
 

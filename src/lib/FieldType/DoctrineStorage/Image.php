@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\FieldType\Image\ImageStorage\Gateway;
+namespace EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
 use Doctrine\DBAL\Connection;
 use DOMDocument;
@@ -18,7 +18,7 @@ use PDO;
 /**
  * Image Field Type external storage DoctrineStorage gateway.
  */
-class DoctrineStorage extends Gateway
+class Image extends Gateway
 {
     const IMAGE_FILE_TABLE = 'ezimagefile';
 

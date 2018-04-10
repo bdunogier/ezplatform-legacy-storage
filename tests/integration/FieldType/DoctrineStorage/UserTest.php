@@ -6,12 +6,12 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\FieldType\Tests\Integration\User\UserStorage\Gateway;
+namespace EzSystems\IntegrationTests\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
 use eZ\Publish\Core\FieldType\Tests\Integration\User\UserStorage\UserStorageGatewayTest;
-use eZ\Publish\Core\FieldType\User\UserStorage\Gateway\LegacyStorage;
+use eZ\Publish\Core\FieldType\User\UserStorage\Gateway\User;
 
-class LegacyStorageTest extends UserStorageGatewayTest
+class UserTest extends UserStorageGatewayTest
 {
     /**
      * @return \eZ\Publish\Core\FieldType\User\UserStorage\Gateway
@@ -20,6 +20,6 @@ class LegacyStorageTest extends UserStorageGatewayTest
     {
         $dbHandler = $this->getDatabaseHandler();
 
-        return new LegacyStorage($dbHandler);
+        return new User($dbHandler->getConnection());
     }
 }

@@ -6,14 +6,14 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\FieldType\Keyword\KeywordStorage\Gateway;
+namespace EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
 use Doctrine\DBAL\Connection;
 use eZ\Publish\Core\FieldType\Keyword\KeywordStorage\Gateway;
 use eZ\Publish\SPI\Persistence\Content\Field;
 use RuntimeException;
 
-class DoctrineStorage extends Gateway
+class Keyword extends Gateway
 {
     const KEYWORD_TABLE = 'ezkeyword';
     const KEYWORD_ATTRIBUTE_LINK_TABLE = 'ezkeyword_attribute_link';

@@ -12,7 +12,7 @@ use Doctrine\DBAL\Connection;
 use eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway;
 use PDO;
 
-class DoctrineStorage extends Gateway
+class Url extends Gateway
 {
     const URL_TABLE = 'ezurl';
     const URL_LINK_TABLE = 'ezurl_object_link';

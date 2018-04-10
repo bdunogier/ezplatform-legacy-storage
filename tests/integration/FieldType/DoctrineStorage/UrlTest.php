@@ -1,20 +1,20 @@
 <?php
 
 /**
- * File containing the LegacyStorageTest for Url FieldType.
+ * This file is part of the eZ Publish Kernel package.
  *
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\FieldType\Tests\Url\Gateway;
+namespace EzSystems\IntegrationTests\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
-use eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway\LegacyStorage;
+use eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway\Url;
 use eZ\Publish\Core\Persistence\Legacy\Tests\TestCase;
 
 /**
- * Tests the Url LegacyStorage gateway.
+ * Url DoctrineStorage gateway tests.
  */
-class LegacyStorageTest extends TestCase
+class UrlTest extends TestCase
 {
     public function testGetIdUrlMap()
     {
@@ -62,30 +62,31 @@ class LegacyStorageTest extends TestCase
         $time = time();
         $id = $gateway->insertUrl($url);
 
-        $query = $this->getDatabaseHandler()->createSelectQuery();
+        $query = $this->connection->createQueryBuilder();
         $query
             ->select('*')
-            ->from('ezurl')
+            ->from(Url::URL_TABLE)
             ->where(
-                $query->expr->eq(
-                    $this->handler->quoteColumn('id'),
-                    $query->bindValue($id)
+                $query->expr()->eq(
+                    $this->connection->quoteIdentifier('id'),
+                    ':id'
                 )
-            );
-        $statement = $query->prepare();
-        $statement->execute();
+            )
+            ->setParameter('id', $id, \PDO::PARAM_INT)
+        ;
 
+        $statement = $query->execute();
         $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
-        $expected = array(
-            array(
+        $expected = [
+            [
                 'id' => $id,
                 'is_valid' => '1',
                 'last_checked' => '0',
                 'original_url_md5' => md5($url),
                 'url' => $url,
-            ),
-        );
+            ],
+        ];
 
         $this->assertGreaterThanOrEqual($time, $result[0]['created']);
         $this->assertGreaterThanOrEqual($time, $result[0]['modified']);
@@ -105,29 +106,27 @@ class LegacyStorageTest extends TestCase
         $versionNo = 1;
         $gateway->linkUrl($urlId, $fieldId, $versionNo);
 
-        $query = $this->getDatabaseHandler()->createSelectQuery();
-        $query->select(
-            '*'
-        )->from(
-            'ezurl_object_link'
-        )->where(
-            $query->expr->eq(
-                $this->handler->quoteColumn('url_id'),
-                $query->bindValue($urlId)
+        $query = $this->connection->createQueryBuilder();
+        $query
+            ->select('*')
+            ->from(Url::URL_LINK_TABLE)
+            ->where(
+                $query->expr()->eq($this->connection->quoteIdentifier('url_id'), ':urlId')
             )
-        );
-        $statement = $query->prepare();
-        $statement->execute();
+            ->setParameter(':urlId', $urlId, \PDO::PARAM_INT)
+        ;
+
+        $statement = $query->execute();
 
         $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
-        $expected = array(
-            array(
+        $expected = [
+            [
                 'contentobject_attribute_id' => $fieldId,
                 'contentobject_attribute_version' => $versionNo,
                 'url_id' => $urlId,
-            ),
-        );
+            ],
+        ];
 
         $this->assertEquals($expected, $result);
     }
@@ -142,33 +141,32 @@ class LegacyStorageTest extends TestCase
         $versionNo = 5;
         $gateway->unlinkUrl($fieldId, $versionNo);
 
-        $query = $this->getDatabaseHandler()->createSelectQuery();
-        $query->select('*')->from('ezurl_object_link');
-        $statement = $query->prepare();
-        $statement->execute();
+        $query = $this->connection->createQueryBuilder();
+        $query->select('*')->from(Url::URL_LINK_TABLE);
 
+        $statement = $query->execute();
         $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
-        $expected = array(
-            array(
+        $expected = [
+            [
                 'contentobject_attribute_id' => 43,
                 'contentobject_attribute_version' => 6,
                 'url_id' => 24,
-            ),
-        );
+            ],
+        ];
 
         $this->assertEquals($expected, $result);
 
         // Check that orphaned URLs are correctly removed
-        $query = $this->getDatabaseHandler()->createSelectQuery();
-        $query->select('*')->from('ezurl');
-        $statement = $query->prepare();
-        $statement->execute();
+        $query = $this->connection->createQueryBuilder();
+        $query->select('*')->from(Url::URL_TABLE);
+
+        $statement = $query->execute();
 
         $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
 
-        $expected = array(
-            array(
+        $expected = [
+            [
                 'created' => '1343140541',
                 'id' => '24',
                 'is_valid' => '1',
@@ -176,26 +174,18 @@ class LegacyStorageTest extends TestCase
                 'modified' => '1343140541',
                 'original_url_md5' => 'c86bcb109d8e70f9db65c803baafd550',
                 'url' => '/content/view/tagcloud/2',
-            ),
-        );
+            ],
+        ];
 
         $this->assertEquals($expected, $result);
     }
 
-    /**
-     * @var \eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway\LegacyStorage
-     */
-    protected $storageGateway;
-
-    /**
-     * Returns a ready to test LegacyStorage gateway.
-     *
-     * @return \eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway\LegacyStorage
-     */
     protected function getStorageGateway()
     {
         if (!isset($this->storageGateway)) {
-            $this->storageGateway = new LegacyStorage($this->getDatabaseHandler());
+            $this->storageGateway = new Url(
+                $this->getDatabaseHandler()->getConnection()
+            );
         }
 
         return $this->storageGateway;

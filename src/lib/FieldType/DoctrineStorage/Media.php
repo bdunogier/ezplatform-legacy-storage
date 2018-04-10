@@ -6,18 +6,17 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\FieldType\Media\MediaStorage\Gateway;
+namespace EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
 use Doctrine\DBAL\Query\QueryBuilder;
 use eZ\Publish\SPI\Persistence\Content\VersionInfo;
 use eZ\Publish\SPI\Persistence\Content\Field;
-use eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage\Gateway\DoctrineStorage as BaseDoctrineStorage;
 use PDO;
 
 /**
  * Media Field Type external storage DoctrineStorage gateway.
  */
-class DoctrineStorage extends BaseDoctrineStorage
+class Media extends BinaryBase
 {
     /**
      * {@inheritdoc}

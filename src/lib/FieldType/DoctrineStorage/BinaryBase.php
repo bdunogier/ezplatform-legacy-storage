@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\FieldType\BinaryBase\BinaryBaseStorage\Gateway;
+namespace EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Query\QueryBuilder;
@@ -18,7 +18,7 @@ use PDO;
 /**
  * Base class for binary files external storage DoctrineStorage gateways.
  */
-abstract class DoctrineStorage extends Gateway
+abstract class BinaryBase extends Gateway
 {
     /**
      * @var \Doctrine\DBAL\Connection

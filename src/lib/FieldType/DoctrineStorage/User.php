@@ -15,7 +15,7 @@ use PDO;
 /**
  * User DoctrineStorage gateway.
  */
-class DoctrineStorage extends Gateway
+class User extends Gateway
 {
     const USER_TABLE = 'ezuser';
     const USER_SETTING_TABLE = 'ezuser_setting';

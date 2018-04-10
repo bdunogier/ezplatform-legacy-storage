@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\FieldType\Page\PageStorage\Gateway;
+namespace EzSystems\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
 use DateTime;
 use Doctrine\DBAL\Connection;
@@ -16,7 +16,7 @@ use eZ\Publish\Core\FieldType\Page\Parts\Block;
 use eZ\Publish\Core\FieldType\Page\Parts\Item;
 use PDO;
 
-class DoctrineStorage extends Gateway
+class Page extends Gateway
 {
     const EZM_POOL_TABLE = 'ezm_pool';
     const EZM_BLOCK_TABLE = 'ezm_block';
