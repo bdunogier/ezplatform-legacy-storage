@@ -9,7 +9,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\Criterio
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 use PDO;
 
 class VisibleOnly implements CriterionHandler
@@ -33,8 +33,8 @@ class VisibleOnly implements CriterionHandler
     /**
      * Generate query that selects ids of visible URLs.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $query
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     protected function getVisibleOnlySubQuery(SelectQuery $query)
     {

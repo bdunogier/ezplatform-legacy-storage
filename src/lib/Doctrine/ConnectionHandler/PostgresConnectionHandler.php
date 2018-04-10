@@ -6,9 +6,9 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler;
 
-use eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler;
 
 class PostgresConnectionHandler extends ConnectionHandler
 {

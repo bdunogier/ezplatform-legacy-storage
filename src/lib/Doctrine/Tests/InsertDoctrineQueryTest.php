@@ -1,6 +1,6 @@
 <?php
 
-namespace eZ\Publish\Core\Persistence\Doctrine\Tests;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine\Tests;
 
 class InsertDoctrineQueryTest extends TestCase
 {

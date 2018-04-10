@@ -9,7 +9,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\Criterio
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 
 class LogicalAnd implements CriterionHandler
 {

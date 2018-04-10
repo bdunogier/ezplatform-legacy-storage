@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Database;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Database;
 
 /**
  * Interface for generation of all the expressions for database abstractions.
@@ -31,7 +31,7 @@ interface Expression
      *                                    $e->eq( 'id', $q->bindValue( 2 ) ) ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @return string a logical expression
      */
@@ -52,7 +52,7 @@ interface Expression
      *                                     $e->eq( 'id', $q->bindValue( 2 ) ) ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @return string a logical expression
      */
@@ -89,7 +89,7 @@ interface Expression
      *                  ->where( $q->expr->add( 'id', 2 )  );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $...
      *
@@ -111,7 +111,7 @@ interface Expression
      *                  ->where( $q->expr->subtract( 'id', 2 )  );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $...
      *
@@ -133,7 +133,7 @@ interface Expression
      *                  ->where( $q->expr->multiply( 'id', 2 )  );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $...
      *
@@ -155,7 +155,7 @@ interface Expression
      *                  ->where( $q->expr->divide( 'id', 2 )  );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $...
      *
@@ -288,9 +288,9 @@ interface Expression
      * in resulting SQL query and saves time of converting strings to
      * numbers inside RDBMS.
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with less than two
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with less than two
      *         parameters.
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if the 2nd parameter is an
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if the 2nd parameter is an
      *         empty array.
      *
      * @param string $column the value that should be matched against
@@ -532,7 +532,7 @@ interface Expression
      *     ->from( 'table' );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException
      *
      * @return string
      */

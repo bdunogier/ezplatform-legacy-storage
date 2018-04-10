@@ -311,7 +311,7 @@ class HandlerTest extends TestCase
     }
 
     /**
-     * @covers \eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler::createFromDSN
+     * @covers \EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler::createFromDSN
      */
     public function testDatabaseInstance()
     {

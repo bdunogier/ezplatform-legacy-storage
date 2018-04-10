@@ -1,8 +1,8 @@
 <?php
 
-namespace eZ\Publish\Core\Persistence\Doctrine\Tests;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine\Tests;
 
-use eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler;
 use PHPUnit\Framework\TestCase;
 
 class ConnectionHandlerTest extends TestCase

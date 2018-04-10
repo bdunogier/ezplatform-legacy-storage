@@ -6,10 +6,10 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine;
 
-use eZ\Publish\Core\Persistence\Database\InsertQuery;
-use eZ\Publish\Core\Persistence\Database\QueryException;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException;
 
 /**
  * Class InsertDoctrineQuery.
@@ -36,7 +36,7 @@ class InsertDoctrineQuery extends AbstractDoctrineQuery implements InsertQuery
      *
      * @param string $table
      *
-     * @return \eZ\Publish\Core\Persistence\Database\InsertQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery
      */
     public function insertInto($table)
     {
@@ -53,7 +53,7 @@ class InsertDoctrineQuery extends AbstractDoctrineQuery implements InsertQuery
      * @param string $column
      * @param string $expression
      *
-     * @return \eZ\Publish\Core\Persistence\Database\InsertQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery
      */
     public function set($column, $expression)
     {

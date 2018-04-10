@@ -10,7 +10,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gatew
 
 use Doctrine\DBAL\Connection;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator;
 use eZ\Publish\SPI\Persistence\Content\Type;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
@@ -19,8 +19,8 @@ use eZ\Publish\SPI\Persistence\Content\Type\Group;
 use eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct as GroupUpdateStruct;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
 use eZ\Publish\SPI\Persistence\ValueObject;
-use eZ\Publish\Core\Persistence\Database\Query;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\Query;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 use PDO;
 
 /**
@@ -87,7 +87,7 @@ class DoctrineDatabase extends Gateway
     /**
      * DoctrineDatabase handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $dbHandler;
 
@@ -110,7 +110,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates a new gateway based on $db.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $db
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $db
      * @param \Doctrine\DBAL\Connection $connection
      * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator $languageMaskGenerator
      */
@@ -362,7 +362,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Set common columns for insert/update of a Type.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\InsertQuery|\eZ\Publish\Core\Persistence\Database\UpdateQuery $q
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery|\EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery $q
      * @param \eZ\Publish\SPI\Persistence\ValueObject|\eZ\Publish\SPI\Persistence\Content\Type|\eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct $type
      */
     protected function setCommonTypeColumns(Query $q, ValueObject $type)
@@ -538,7 +538,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates the basic query to load Group data.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     protected function createGroupLoadQuery()
     {
@@ -638,7 +638,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Set common columns for insert/update of FieldDefinition.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\InsertQuery|\eZ\Publish\Core\Persistence\Database\UpdateQuery $q
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery|\EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery $q
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition
      * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageFieldDef
      */
@@ -976,7 +976,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Returns a basic query to retrieve Type data.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     protected function getLoadTypeQuery()
     {
@@ -1270,7 +1270,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates an array of select columns for $tableName.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $q
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $q
      * @param string $tableName
      */
     protected function selectColumns(SelectQuery $q, $tableName)

@@ -4970,7 +4970,7 @@ class UrlAliasHandlerTest extends TestCase
      */
     protected function countRows()
     {
-        /** @var \eZ\Publish\Core\Persistence\Database\SelectQuery $query */
+        /** @var \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query */
         $query = $this->getDatabaseHandler()->createSelectQuery();
         $query->select(
             $query->expr->count('*')
@@ -4986,7 +4986,7 @@ class UrlAliasHandlerTest extends TestCase
 
     protected function dump()
     {
-        /** @var \eZ\Publish\Core\Persistence\Database\SelectQuery $query */
+        /** @var \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query */
         $query = $this->getDatabaseHandler()->createSelectQuery();
         $query->select(
             '*'
@@ -5001,7 +5001,7 @@ class UrlAliasHandlerTest extends TestCase
     }
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler
      */
     protected $dbHandler;
 

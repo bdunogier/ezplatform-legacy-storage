@@ -9,9 +9,9 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway;
 
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
-use eZ\Publish\Core\Persistence\Database\Query as DatabaseQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\Query as DatabaseQuery;
 use eZ\Publish\SPI\Persistence\Content\ContentInfo;
 use eZ\Publish\SPI\Persistence\Content\Location;
 use eZ\Publish\SPI\Persistence\Content\Location\UpdateStruct;
@@ -36,14 +36,14 @@ class DoctrineDatabase extends Gateway
     /**
      * Database handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $handler;
 
     /**
      * Construct from database handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $handler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $handler
      */
     public function __construct(DatabaseHandler $handler)
     {
@@ -152,7 +152,7 @@ class DoctrineDatabase extends Gateway
      */
     public function loadParentLocationsDataForDraftContent($contentId, $drafts = null)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->handler->createSelectQuery();
         $query->selectDistinct(
             'ezcontentobject_tree.*'
@@ -227,7 +227,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Limits the given $query to the subtree starting at $rootLocationId.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\Query $query
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\Query $query
      * @param string $rootLocationId
      */
     protected function applySubtreeLimitation(DatabaseQuery $query, $rootLocationId)
@@ -279,7 +279,7 @@ class DoctrineDatabase extends Gateway
     {
         $fromPathString = $sourceNodeData['path_string'];
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->handler->createSelectQuery();
         $query
             ->select(
@@ -323,7 +323,7 @@ class DoctrineDatabase extends Gateway
                 $newParentId = (int)implode('', array_slice(explode('/', $newPathString), -3, 1));
             }
 
-            /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+            /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
             $query = $this->handler->createUpdateQuery();
             $query
                 ->update($this->handler->quoteTable('ezcontentobject_tree'))
@@ -647,7 +647,7 @@ class DoctrineDatabase extends Gateway
     public function create(CreateStruct $createStruct, array $parentNode)
     {
         $location = new Location();
-        /** @var $query \eZ\Publish\Core\Persistence\Database\InsertQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery */
         $query = $this->handler->createInsertQuery();
         $query
             ->insertInto($this->handler->quoteTable('ezcontentobject_tree'))
@@ -703,7 +703,7 @@ class DoctrineDatabase extends Gateway
 
         $mainLocationId = $createStruct->mainLocationId === true ? $location->id : $createStruct->mainLocationId;
         $location->pathString = $parentNode['path_string'] . $location->id . '/';
-        /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $query = $this->handler->createUpdateQuery();
         $query
             ->update($this->handler->quoteTable('ezcontentobject_tree'))
@@ -1045,7 +1045,7 @@ class DoctrineDatabase extends Gateway
             $text :
             $parentData['path_identification_string'] . '/' . $text;
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $query = $this->handler->createUpdateQuery();
         $query->update(
             'ezcontentobject_tree'
@@ -1132,7 +1132,7 @@ class DoctrineDatabase extends Gateway
     {
         $locationRow = $this->getBasicNodeData($locationId);
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\InsertQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery */
         $query = $this->handler->createInsertQuery();
         $query->insertInto($this->handler->quoteTable('ezcontentobject_trash'));
 
@@ -1193,7 +1193,7 @@ class DoctrineDatabase extends Gateway
      */
     protected function setContentStatus($contentId, $status)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $query = $this->handler->createUpdateQuery();
         $query->update(
             'ezcontentobject'

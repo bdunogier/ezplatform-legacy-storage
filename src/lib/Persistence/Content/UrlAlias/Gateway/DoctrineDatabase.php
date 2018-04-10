@@ -10,9 +10,9 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\G
 
 use Doctrine\DBAL\Connection;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator as LanguageMaskGenerator;
-use eZ\Publish\Core\Persistence\Database\Query;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\Query;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Language;
 use RuntimeException;
 
@@ -53,7 +53,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Doctrine database handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $dbHandler;
 
@@ -74,7 +74,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates a new DoctrineDatabase UrlAlias Gateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $dbHandler
      * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator $languageMaskGenerator
      */
     public function __construct(
@@ -102,7 +102,7 @@ class DoctrineDatabase extends Gateway
      */
     public function loadLocationEntries($locationId, $custom = false, $languageId = false)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             $this->dbHandler->quoteColumn('id'),
@@ -169,7 +169,7 @@ class DoctrineDatabase extends Gateway
     {
         $limit = $limit === -1 ? self::MAX_LIMIT : $limit;
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             $this->dbHandler->quoteColumn('action'),
@@ -235,7 +235,7 @@ class DoctrineDatabase extends Gateway
      */
     public function isRootEntry($id)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             $this->dbHandler->quoteColumn('text'),
@@ -270,7 +270,7 @@ class DoctrineDatabase extends Gateway
      */
     public function cleanupAfterPublish($action, $languageId, $newId, $parentId, $textMD5)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             $this->dbHandler->quoteColumn('parent'),
@@ -347,7 +347,7 @@ class DoctrineDatabase extends Gateway
 
     public function historizeBeforeSwap($action, $languageMask)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $query = $this->dbHandler->createUpdateQuery();
         $query->update(
             $this->dbHandler->quoteTable($this->table)
@@ -401,7 +401,7 @@ class DoctrineDatabase extends Gateway
      */
     protected function historize($parentId, $textMD5, $newId)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $query = $this->dbHandler->createUpdateQuery();
         $query->update(
             $this->dbHandler->quoteTable($this->table)
@@ -444,7 +444,7 @@ class DoctrineDatabase extends Gateway
      */
     protected function removeTranslation($parentId, $textMD5, $languageId)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $query = $this->dbHandler->createUpdateQuery();
         $query->update(
             $this->dbHandler->quoteTable($this->table)
@@ -480,7 +480,7 @@ class DoctrineDatabase extends Gateway
      */
     public function historizeId($id, $link)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             $this->dbHandler->quoteColumn('parent'),
@@ -528,7 +528,7 @@ class DoctrineDatabase extends Gateway
      */
     public function reparent($oldParentId, $newParentId)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $query = $this->dbHandler->createUpdateQuery();
         $query->update(
             $this->dbHandler->quoteTable($this->table)
@@ -562,7 +562,7 @@ class DoctrineDatabase extends Gateway
      */
     public function updateRow($parentId, $textMD5, array $values)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $query = $this->dbHandler->createUpdateQuery();
         $query->update($this->dbHandler->quoteTable($this->table));
         $this->setQueryValues($query, $values);
@@ -626,7 +626,7 @@ class DoctrineDatabase extends Gateway
             $values['is_original'] = 0;
         }
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\InsertQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery */
         $query = $this->dbHandler->createInsertQuery();
         $query->insertInto($this->dbHandler->quoteTable($this->table));
         $this->setQueryValues($query, $values);
@@ -638,7 +638,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Sets value for insert or update query.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\Query|\eZ\Publish\Core\Persistence\Database\InsertQuery|\eZ\Publish\Core\Persistence\Database\UpdateQuery $query
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\Query|\EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery|\EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery $query
      * @param array $values
      *
      * @throws \Exception
@@ -675,7 +675,7 @@ class DoctrineDatabase extends Gateway
     public function getNextId()
     {
         $sequence = $this->dbHandler->getSequenceName('ezurlalias_ml_incr', 'id');
-        /** @var $query \eZ\Publish\Core\Persistence\Database\InsertQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery */
         $query = $this->dbHandler->createInsertQuery();
         $query->insertInto(
             $this->dbHandler->quoteTable('ezurlalias_ml_incr')
@@ -712,7 +712,7 @@ class DoctrineDatabase extends Gateway
      */
     public function loadRow($parentId, $textMD5)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select('*')->from(
             $this->dbHandler->quoteTable($this->table)
@@ -744,7 +744,7 @@ class DoctrineDatabase extends Gateway
      */
     public function loadUrlAliasData(array $urlHashes)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
 
         $count = count($urlHashes);
@@ -819,7 +819,7 @@ class DoctrineDatabase extends Gateway
      */
     public function loadAutogeneratedEntry($action, $parentId = null)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             '*'
@@ -871,7 +871,7 @@ class DoctrineDatabase extends Gateway
         $pathData = array();
 
         while ($id != 0) {
-            /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+            /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
             $query = $this->dbHandler->createSelectQuery();
             $query->select(
                 $this->dbHandler->quoteColumn('parent'),
@@ -918,7 +918,7 @@ class DoctrineDatabase extends Gateway
      */
     public function loadPathDataByHierarchy(array $hierarchyData)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
 
         $hierarchyConditions = array();
@@ -992,7 +992,7 @@ class DoctrineDatabase extends Gateway
      */
     public function removeCustomAlias($parentId, $textMD5)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\DeleteQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery */
         $query = $this->dbHandler->createDeleteQuery();
         $query->deleteFrom(
             $this->dbHandler->quoteTable($this->table)
@@ -1030,7 +1030,7 @@ class DoctrineDatabase extends Gateway
      */
     public function remove($action, $id = null)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\DeleteQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery */
         $query = $this->dbHandler->createDeleteQuery();
         $query->deleteFrom(
             $this->dbHandler->quoteTable($this->table)
@@ -1069,7 +1069,7 @@ class DoctrineDatabase extends Gateway
      */
     public function loadAutogeneratedEntries($parentId, $includeHistory = false)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             '*'

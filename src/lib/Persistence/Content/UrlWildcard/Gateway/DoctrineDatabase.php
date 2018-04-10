@@ -9,7 +9,7 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway;
 
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 use eZ\Publish\SPI\Persistence\Content\UrlWildcard;
 
 /**
@@ -26,14 +26,14 @@ class DoctrineDatabase extends Gateway
     /**
      * Database handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $dbHandler;
 
     /**
      * Creates a new DoctrineDatabase Section Gateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $dbHandler
      */
     public function __construct(DatabaseHandler $dbHandler)
     {
@@ -49,7 +49,7 @@ class DoctrineDatabase extends Gateway
      */
     public function insertUrlWildcard(UrlWildcard $urlWildcard)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\InsertQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery */
         $query = $this->dbHandler->createInsertQuery();
         $query->insertInto(
             $this->dbHandler->quoteTable('ezurlwildcard')
@@ -93,7 +93,7 @@ class DoctrineDatabase extends Gateway
      */
     public function deleteUrlWildcard($id)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\DeleteQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery */
         $query = $this->dbHandler->createDeleteQuery();
         $query->deleteFrom(
             $this->dbHandler->quoteTable('ezurlwildcard')
@@ -115,7 +115,7 @@ class DoctrineDatabase extends Gateway
      */
     public function loadUrlWildcardData($id)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             '*'
@@ -145,7 +145,7 @@ class DoctrineDatabase extends Gateway
     {
         $limit = $limit === -1 ? self::MAX_LIMIT : $limit;
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             '*'

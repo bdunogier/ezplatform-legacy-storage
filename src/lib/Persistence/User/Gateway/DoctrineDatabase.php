@@ -9,7 +9,7 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Gateway;
 
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Gateway;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 use eZ\Publish\SPI\Persistence\User;
 use eZ\Publish\SPI\Persistence\User\UserTokenUpdateStruct;
 
@@ -21,14 +21,14 @@ class DoctrineDatabase extends Gateway
     /**
      * Database handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $handler;
 
     /**
      * Construct from database handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $handler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $handler
      */
     public function __construct(DatabaseHandler $handler)
     {

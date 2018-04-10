@@ -9,7 +9,7 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway;
 
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 
 /**
  * Section Handler.
@@ -19,14 +19,14 @@ class DoctrineDatabase extends Gateway
     /**
      * Database handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $dbHandler
      */
     protected $dbHandler;
 
     /**
      * Creates a new DoctrineDatabase Section Gateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $dbHandler
      */
     public function __construct(DatabaseHandler $dbHandler)
     {

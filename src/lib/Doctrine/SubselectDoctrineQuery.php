@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine;
 
 use PDO;
 
@@ -21,7 +21,7 @@ class SubselectDoctrineQuery extends SelectDoctrineQuery
     /**
      * Holds the outer query.
      *
-     * @var \eZ\Publish\Core\Persistence\Doctrine\SelectDoctrineQuery
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Doctrine\SelectDoctrineQuery
      */
     protected $outerQuery = null;
 
@@ -31,7 +31,7 @@ class SubselectDoctrineQuery extends SelectDoctrineQuery
      * The subSelect() method of the ezcQuery object creates an object of this
      * class, and passes itself as $outer parameter to this constructor.
      *
-     * @param \eZ\Publish\Core\Persistence\Doctrine\AbstractDoctrineQuery $outer
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Doctrine\AbstractDoctrineQuery $outer
      */
     public function __construct(AbstractDoctrineQuery $outer)
     {
@@ -182,7 +182,7 @@ class SubselectDoctrineQuery extends SelectDoctrineQuery
      * ?>
      * </code>
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function subSelect()
     {

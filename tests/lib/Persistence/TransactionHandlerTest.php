@@ -11,7 +11,7 @@ namespace EzSystems\Tests\EzPlatformLegacyStorageEngine\Persistence;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\TransactionHandler;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\CachingHandler;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\MemoryCachingHandler;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 use Exception;
 
 /**
@@ -27,7 +27,7 @@ class TransactionHandlerTest extends \PHPUnit\Framework\TestCase
     protected $transactionHandler;
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler|\PHPUnit\Framework\MockObject\MockObject
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler|\PHPUnit\Framework\MockObject\MockObject
      */
     protected $dbHandlerMock;
 
@@ -189,7 +189,7 @@ class TransactionHandlerTest extends \PHPUnit\Framework\TestCase
     /**
      * Returns a mock object for the Content Gateway.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\DatabaseHandler|\PHPUnit\Framework\MockObject\MockObject
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler|\PHPUnit\Framework\MockObject\MockObject
      */
     protected function getDatabaseHandlerMock()
     {

@@ -10,7 +10,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectStat
 
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Gateway;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 use eZ\Publish\SPI\Persistence\Content\ObjectState;
 use eZ\Publish\SPI\Persistence\Content\ObjectState\Group;
 
@@ -22,7 +22,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Database handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $dbHandler;
 
@@ -36,7 +36,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates a new Doctrine database ObjectState Gateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $dbHandler
      * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator $maskGenerator
      */
     public function __construct(DatabaseHandler $dbHandler, MaskGenerator $maskGenerator)
@@ -642,7 +642,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates a generalized query for fetching object state(s).
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     protected function createObjectStateFindQuery()
     {
@@ -675,7 +675,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates a generalized query for fetching object state group(s).
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     protected function createObjectStateGroupFindQuery()
     {

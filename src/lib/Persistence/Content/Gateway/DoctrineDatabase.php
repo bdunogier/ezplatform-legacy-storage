@@ -13,10 +13,10 @@ use Doctrine\DBAL\DBALException;
 use eZ\Publish\Core\Base\Exceptions\BadStateException;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway\DoctrineDatabase\QueryBuilder;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
-use eZ\Publish\Core\Persistence\Database\UpdateQuery;
-use eZ\Publish\Core\Persistence\Database\InsertQuery;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator as LanguageMaskGenerator;
 use eZ\Publish\SPI\Persistence\Content;
@@ -42,7 +42,7 @@ class DoctrineDatabase extends Gateway
     /**
      * eZ Doctrine database handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $dbHandler;
 
@@ -79,7 +79,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates a new gateway based on $db.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $db
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $db
      * @param \Doctrine\DBAL\Connection $connection
      * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway\DoctrineDatabase\QueryBuilder $queryBuilder
      * @param \eZ\Publish\SPI\Persistence\Content\Language\Handler $languageHandler
@@ -224,7 +224,7 @@ class DoctrineDatabase extends Gateway
      */
     public function insertVersion(VersionInfo $versionInfo, array $fields)
     {
-        /** @var $q \eZ\Publish\Core\Persistence\Database\InsertQuery */
+        /** @var $q \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery */
         $q = $this->dbHandler->createInsertQuery();
         $q->insertInto(
             $this->dbHandler->quoteTable('ezcontentobject_version')
@@ -426,7 +426,7 @@ class DoctrineDatabase extends Gateway
             $alwaysAvailable = (bool)$contentInfoRow['language_mask'] & 1;
         }
 
-        /** @var $q \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $q \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $q = $this->dbHandler->createUpdateQuery();
         $q
             ->update($this->dbHandler->quoteTable('ezcontentobject'))
@@ -445,7 +445,7 @@ class DoctrineDatabase extends Gateway
         $q->prepare()->execute();
 
         // Now we need to update ezcontentobject_name
-        /** @var $qName \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $qName \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $qName = $this->dbHandler->createUpdateQuery();
         $qName
             ->update($this->dbHandler->quoteTable('ezcontentobject_name'))
@@ -475,7 +475,7 @@ class DoctrineDatabase extends Gateway
 
         // Now update ezcontentobject_attribute for current version
         // Create update query that will be reused
-        /** @var $qAttr \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+        /** @var $qAttr \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
         $qAttr = $this->dbHandler->createUpdateQuery();
         $qAttr
             ->update($this->dbHandler->quoteTable('ezcontentobject_attribute'))
@@ -661,7 +661,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Sets field (ezcontentobject_attribute) values to the given query.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\InsertQuery $q
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery $q
      * @param Content $content
      * @param Field $field
      * @param StorageFieldValue $value
@@ -759,7 +759,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Sets update fields for $value on $q.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\UpdateQuery $q
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery $q
      * @param StorageFieldValue $value
      */
     protected function setFieldUpdateValues(UpdateQuery $q, StorageFieldValue $value)
@@ -1028,7 +1028,7 @@ class DoctrineDatabase extends Gateway
      * Helper for {@see listVersions()} and {@see listVersionsForUser()} that filters duplicates
      * that are the result of the cartesian product performed by createVersionInfoFindQuery().
      *
-     * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $query
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query
      *
      * @return string[][]
      */
@@ -1552,7 +1552,7 @@ class DoctrineDatabase extends Gateway
      *
      * Return sub select query which gets proper language mask for alwaysAvailable Content.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     private function getLanguageQuery()
     {
@@ -1803,7 +1803,7 @@ class DoctrineDatabase extends Gateway
     {
         // Legacy Storage stores COMMON, LINK and EMBED types using bitmask, therefore first load
         // existing relation type by given $relationId for comparison
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             $this->dbHandler->quoteColumn('relation_type')
@@ -1826,7 +1826,7 @@ class DoctrineDatabase extends Gateway
 
         // If relation type matches then delete
         if ($loadedRelationType == $type) {
-            /** @var $query \eZ\Publish\Core\Persistence\Database\DeleteQuery */
+            /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery */
             $query = $this->dbHandler->createDeleteQuery();
             $query->deleteFrom(
                 'ezcontentobject_link'
@@ -1839,7 +1839,7 @@ class DoctrineDatabase extends Gateway
 
             $query->prepare()->execute();
         } elseif ($loadedRelationType & $type) { // If relation type is composite update bitmask
-            /** @var $query \eZ\Publish\Core\Persistence\Database\UpdateQuery */
+            /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery */
             $query = $this->dbHandler->createUpdateQuery();
             $query->update(
                 $this->dbHandler->quoteTable('ezcontentobject_link')

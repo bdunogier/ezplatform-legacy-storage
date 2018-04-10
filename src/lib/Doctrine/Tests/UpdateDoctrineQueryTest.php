@@ -1,8 +1,8 @@
 <?php
 
-namespace eZ\Publish\Core\Persistence\Doctrine\Tests;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine\Tests;
 
-use eZ\Publish\Core\Persistence\Database\QueryException;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException;
 
 class UpdateDoctrineQueryTest extends TestCase
 {

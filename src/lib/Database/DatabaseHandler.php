@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Database;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Database;
 
 use eZ\Publish\Core\Persistence\Legacy\EzcDbHandler;
 
@@ -75,35 +75,35 @@ interface DatabaseHandler extends EzcDbHandler
     /**
      * Create Select Query object.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function createSelectQuery();
 
     /**
      * Create Insert Query object.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\InsertQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery
      */
     public function createInsertQuery();
 
     /**
      * Create update Query object.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\UpdateQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery
      */
     public function createUpdateQuery();
 
     /**
      * Create a Delete Query object.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\DeleteQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery
      */
     public function createDeleteQuery();
 
     /**
      * Creates an alias for $tableName, $columnName in $query.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $query
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query
      * @param string $columnName
      * @param string|null $tableName
      *

@@ -6,10 +6,10 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine;
 
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
-use eZ\Publish\Core\Persistence\Database\QueryException;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException;
 
 /**
  * Class SelectDoctrineQuery.
@@ -83,11 +83,11 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * Each of above code produce SQL clause 'SELECT column1, column2' for the query.
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters..
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters..
      *
      * @param string|array(string) $... Either a string with a column name or an array of column names.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery returns a pointer to $this.
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery returns a pointer to $this.
      */
     public function select()
     {
@@ -153,13 +153,13 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * You may call select() after calling selectDistinct() which will result
      * in the additional columns beein added. A call of selectDistinct() after
-     * select() will result in an \eZ\Publish\Core\Persistence\Database\SelectQueryInvalidException.
+     * select() will result in an \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQueryInvalidException.
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters..
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters..
      *
      * @param string|array(string) $... Either a string with a column name or an array of column names.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery returns a pointer to $this.
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery returns a pointer to $this.
      */
     public function selectDistinct()
     {
@@ -184,11 +184,11 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      * $q->select( 'id' )->from( 'table_name' );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $... Either a string with a table name or an array of table names.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery a pointer to $this
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery a pointer to $this
      */
     public function from()
     {
@@ -211,13 +211,13 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * <b>innerJoin( 't2', $joinCondition )</b>
      *
-     * Takes 2 string arguments and returns \eZ\Publish\Core\Persistence\Database\SelectQuery.
+     * Takes 2 string arguments and returns \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery.
      *
      * The first parameter is the name of the table to join with. The table to
      * which is joined should have been previously set with the from() method.
      *
      * The second parameter should be a string containing a join condition that
-     * is returned by an \eZ\Publish\Core\Persistence\Database\SelectQueryExpression.
+     * is returned by an \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQueryExpression.
      *
      * Example:
      * <code>
@@ -228,7 +228,7 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * <b>innerJoin( 't2', 't1.id', 't2.id' )</b>
      *
-     * Takes 3 string arguments and returns \eZ\Publish\Core\Persistence\Database\SelectQuery. This is a simplified form
+     * Takes 3 string arguments and returns \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery. This is a simplified form
      * of the 2 parameter version.  innerJoin( 't2', 't1.id', 't2.id' ) is
      * equal to innerJoin( 't2', $this->expr->eq('t1.id', 't2.id' ) );
      *
@@ -247,13 +247,13 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      * $q->select( 'id' )->from( 't1' )->innerJoin( 't2', 't1.id', 't2.id' );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with inconsistent parameters or if
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with inconsistent parameters or if
      *         invoked without preceding call to from().
      *
      * @param string $table2,... The table to join with, followed by either the
      *                           two join columns, or a join condition.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function innerJoin()
     {
@@ -266,7 +266,7 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      * @param string $type
      * @param array $args
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     protected function doJoin($type, array $args)
     {
@@ -299,13 +299,13 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * <b>leftJoin( 't2', $joinCondition )</b>
      *
-     * Takes 2 string arguments and returns \eZ\Publish\Core\Persistence\Database\SelectQuery.
+     * Takes 2 string arguments and returns \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery.
      *
      * The first parameter is the name of the table to join with. The table to
      * which is joined should have been previously set with the from() method.
      *
      * The second parameter should be a string containing a join condition that
-     * is returned by an \eZ\Publish\Core\Persistence\Database\SelectQueryExpression.
+     * is returned by an \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQueryExpression.
      *
      * Example:
      * <code>
@@ -316,7 +316,7 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * <b>leftJoin( 't2', 't1.id', 't2.id' )</b>
      *
-     * Takes 3 string arguments and returns \eZ\Publish\Core\Persistence\Database\SelectQuery. This is a simplified form
+     * Takes 3 string arguments and returns \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery. This is a simplified form
      * of the 2 parameter version.  leftJoin( 't2', 't1.id', 't2.id' ) is
      * equal to leftJoin( 't2', $this->expr->eq('t1.id', 't2.id' ) );
      *
@@ -335,13 +335,13 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      * $q->select( 'id' )->from( 't1' )->leftJoin( 't2', 't1.id', 't2.id' );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with inconsistent parameters or if
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with inconsistent parameters or if
      *         invoked without preceding call to from().
      *
      * @param string $table2,... The table to join with, followed by either the
      *                           two join columns, or a join condition.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function leftJoin()
     {
@@ -355,13 +355,13 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * <b>rightJoin( 't2', $joinCondition )</b>
      *
-     * Takes 2 string arguments and returns \eZ\Publish\Core\Persistence\Database\SelectQuery.
+     * Takes 2 string arguments and returns \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery.
      *
      * The first parameter is the name of the table to join with. The table to
      * which is joined should have been previously set with the from() method.
      *
      * The second parameter should be a string containing a join condition that
-     * is returned by an \eZ\Publish\Core\Persistence\Database\SelectQueryExpression.
+     * is returned by an \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQueryExpression.
      *
      * Example:
      * <code>
@@ -372,7 +372,7 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * <b>rightJoin( 't2', 't1.id', 't2.id' )</b>
      *
-     * Takes 3 string arguments and returns \eZ\Publish\Core\Persistence\Database\SelectQuery. This is a simplified form
+     * Takes 3 string arguments and returns \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery. This is a simplified form
      * of the 2 parameter version.  rightJoin( 't2', 't1.id', 't2.id' ) is
      * equal to rightJoin( 't2', $this->expr->eq('t1.id', 't2.id' ) );
      *
@@ -391,13 +391,13 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      * $q->select( 'id' )->from( 't1' )->rightJoin( 't2', 't1.id', 't2.id' );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with inconsistent parameters or if
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with inconsistent parameters or if
      *         invoked without preceding call to from().
      *
      * @param string $table2,... The table to join with, followed by either the
      *                           two join columns, or a join condition.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function rightJoin()
     {
@@ -419,12 +419,12 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      * $q->select( '*' )->from( 'table' )->where( $q->expr->eq( 'id', 1 ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $... Either a string with a logical expression name
      * or an array with logical expressions.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function where()
     {
@@ -461,7 +461,7 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      * @param string $limit integer expression
      * @param string $offset integer expression
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function limit($limit, $offset = '')
     {
@@ -483,10 +483,10 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *
      * @param string $column a column name in the result set
      * @param string $type if the column should be sorted ascending or descending.
-     *        you can specify this using \eZ\Publish\Core\Persistence\Database\SelectQuery::ASC
-     *        or \eZ\Publish\Core\Persistence\Database\SelectQuery::DESC
+     *        you can specify this using \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery::ASC
+     *        or \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery::DESC
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery a pointer to $this
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery a pointer to $this
      */
     public function orderBy($column, $type = self::ASC)
     {
@@ -511,11 +511,11 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *                  ->groupBy( 'id' );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string $column a column name in the result set
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery a pointer to $this
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery a pointer to $this
      */
     public function groupBy()
     {
@@ -540,13 +540,13 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
      *                  ->having( $q->expr->eq('id',1) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException
      *         if called with no parameters.
      *
      * @param string|array(string) $... Either a string with a logical expression name
      *                             or an array with logical expressions.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery a pointer to $this
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery a pointer to $this
      */
     public function having()
     {
@@ -566,7 +566,7 @@ class SelectDoctrineQuery extends AbstractDoctrineQuery implements SelectQuery
     /**
      * Returns the query string for this query object.
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if it was not possible to build a valid query.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if it was not possible to build a valid query.
      *
      * @return string
      */

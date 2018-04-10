@@ -6,12 +6,12 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Database;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Database;
 
 use PDO;
 
 /**
- * @property-read \eZ\Publish\Core\Persistence\Database\Expression $expr
+ * @property-read \EzSystems\EzPlatformLegacyStorageEngine\Database\Expression $expr
  *
  * @deprecated Since 6.13, please use Doctrine DBAL instead (@ezpublish.persistence.connection)
  *             it provides richer and more powerful DB abstraction which is also easier to use.
@@ -21,7 +21,7 @@ interface Query
     /**
      * Create a subselect used with the current query.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function subSelect();
 

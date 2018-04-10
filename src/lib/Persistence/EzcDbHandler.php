@@ -15,7 +15,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence;
  * data storage connection.
  *
  * @see \eZ\Publish\Core\FieldType\StorageGateway::setConnection()
- * @see \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+ * @see \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
  */
 interface EzcDbHandler
 {

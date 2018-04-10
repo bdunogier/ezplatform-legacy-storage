@@ -8,8 +8,8 @@
  */
 namespace EzSystems\Tests\EzPlatformLegacyStorageEngine\Persistence;
 
-use eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use InvalidArgumentException;
 use PDOException;
@@ -37,7 +37,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Database handler -- to not be constructed twice for one test.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $handler;
 
@@ -84,7 +84,7 @@ abstract class TestCase extends BaseTestCase
      * environment variable "DATABASE" and defaults to an in-memory SQLite
      * database.
      *
-     * @return \eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler
      */
     public function getDatabaseHandler()
     {
@@ -237,7 +237,7 @@ abstract class TestCase extends BaseTestCase
      * Assert query result as correct.
      *
      * Builds text representations of the asserted and fetched query result,
-     * based on a eZ\Publish\Core\Persistence\Database\SelectQuery object. Compares them using classic diff for
+     * based on a EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery object. Compares them using classic diff for
      * maximum readability of the differences between expectations and real
      * results.
      *
@@ -245,7 +245,7 @@ abstract class TestCase extends BaseTestCase
      * rows of columns.
      *
      * @param array $expectation
-     * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $query
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query
      * @param string $message
      */
     public static function assertQueryResult(array $expectation, SelectQuery $query, $message = '')

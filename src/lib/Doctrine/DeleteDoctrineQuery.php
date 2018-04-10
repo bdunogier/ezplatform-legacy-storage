@@ -6,10 +6,10 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine;
 
-use eZ\Publish\Core\Persistence\Database\QueryException;
-use eZ\Publish\Core\Persistence\Database\DeleteQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery;
 
 /**
  * Class DeleteDoctrineQuery.
@@ -36,7 +36,7 @@ class DeleteDoctrineQuery extends AbstractDoctrineQuery implements DeleteQuery
      *
      * @param string $table
      *
-     * @return \eZ\Publish\Core\Persistence\Database\DeleteQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery
      */
     public function deleteFrom($table)
     {
@@ -60,12 +60,12 @@ class DeleteDoctrineQuery extends AbstractDoctrineQuery implements DeleteQuery
      * $q->deleteFrom( 'MyTable' )->where( $q->eq( 'id', 1 ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $... Either a string with a logical expression name
      * or an array with logical expressions.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\DeleteQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery
      */
     public function where()
     {

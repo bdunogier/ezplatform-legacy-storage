@@ -6,10 +6,10 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine;
 
-use eZ\Publish\Core\Persistence\Database\UpdateQuery;
-use eZ\Publish\Core\Persistence\Database\QueryException;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException;
 
 /**
  * Class UpdateDoctrineQuery.
@@ -41,7 +41,7 @@ class UpdateDoctrineQuery extends AbstractDoctrineQuery implements UpdateQuery
      *
      * @param string $table
      *
-     * @return \eZ\Publish\Core\Persistence\Database\UpdateQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery
      */
     public function update($table)
     {
@@ -56,7 +56,7 @@ class UpdateDoctrineQuery extends AbstractDoctrineQuery implements UpdateQuery
      * @param string $column
      * @param string $expression
      *
-     * @return \eZ\Publish\Core\Persistence\Database\UpdateQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery
      */
     public function set($column, $expression)
     {
@@ -81,12 +81,12 @@ class UpdateDoctrineQuery extends AbstractDoctrineQuery implements UpdateQuery
      * $q->update( 'MyTable' )->where( $q->expr->eq( 'id', 1 ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $... Either a string with a logical expression name
      * or an array with logical expressions.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\UpdateQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery
      */
     public function where()
     {

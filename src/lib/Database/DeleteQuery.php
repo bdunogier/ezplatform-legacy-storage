@@ -6,10 +6,10 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Database;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Database;
 
 /**
- * @property-read \eZ\Publish\Core\Persistence\Database\Expression $expr
+ * @property-read \EzSystems\EzPlatformLegacyStorageEngine\Database\Expression $expr
  *
  * @deprecated Since 6.13, please use Doctrine DBAL instead (@ezpublish.persistence.connection)
  *             it provides richer and more powerful DB abstraction which is also easier to use.
@@ -23,7 +23,7 @@ interface DeleteQuery extends Query
      *
      * @param string $table
      *
-     * @return \eZ\Publish\Core\Persistence\Database\DeleteQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery
      */
     public function deleteFrom($table);
 
@@ -42,12 +42,12 @@ interface DeleteQuery extends Query
      * $q->deleteFrom( 'MyTable' )->where( $q->eq( 'id', 1 ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $... Either a string with a logical expression name
      * or an array with logical expressions.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\DeleteQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery
      */
     public function where();
 }

@@ -8,21 +8,21 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway\DoctrineDatabase;
 
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 
 class QueryBuilder
 {
     /**
      * Database handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     protected $dbHandler;
 
     /**
      * Creates a new query builder.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $dbHandler
      */
     public function __construct(DatabaseHandler $dbHandler)
     {
@@ -39,11 +39,11 @@ class QueryBuilder
      *
      * @param string[] $translations
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function createFindQuery(array $translations = null)
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             // Content object
@@ -135,7 +135,7 @@ class QueryBuilder
     /**
      * Create select query to query content name data.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function createNamesQuery()
     {
@@ -155,11 +155,11 @@ class QueryBuilder
     /**
      * Creates a select query for content relations.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function createRelationFindQuery()
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             $this->dbHandler->aliasedColumn($query, 'id', 'ezcontentobject_link'),
@@ -182,11 +182,11 @@ class QueryBuilder
      * content object. Does not apply any WHERE conditions, and does not contain
      * name data as it will lead to large result set {@see createNamesQuery}.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function createVersionInfoFindQuery()
     {
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->dbHandler->createSelectQuery();
         $query->select(
             // Content object version

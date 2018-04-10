@@ -1533,7 +1533,7 @@ class DoctrineDatabaseTest extends LanguageAwareTestCase
         $gateway = $this->getDatabaseGateway();
         $gateway->deleteRelation(11, RelationValue::COMMON);
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->getDatabaseHandler()->createSelectQuery();
         $this->assertQueryResult(
             array(array('relation_type' => RelationValue::LINK)),

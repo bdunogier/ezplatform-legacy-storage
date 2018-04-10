@@ -6,11 +6,11 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine;
 
-use eZ\Publish\Core\Persistence\Database\Expression;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\Expression;
 use Doctrine\DBAL\Connection;
-use eZ\Publish\Core\Persistence\Database\QueryException;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException;
 
 /**
  * Class DoctrineExpression.
@@ -51,7 +51,7 @@ class DoctrineExpression implements Expression
      *                                    $e->eq( 'id', $q->bindValue( 2 ) ) ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @return string a logical expression
      */
@@ -102,7 +102,7 @@ class DoctrineExpression implements Expression
      *                                     $e->eq( 'id', $q->bindValue( 2 ) ) ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @return string a logical expression
      */
@@ -147,7 +147,7 @@ class DoctrineExpression implements Expression
      *                  ->where( $q->expr->add( 'id', 2 )  );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $...
      *
@@ -174,7 +174,7 @@ class DoctrineExpression implements Expression
      *                  ->where( $q->expr->subtract( 'id', 2 )  );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $...
      *
@@ -201,7 +201,7 @@ class DoctrineExpression implements Expression
      *                  ->where( $q->expr->multiply( 'id', 2 )  );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $...
      *
@@ -228,7 +228,7 @@ class DoctrineExpression implements Expression
      *                  ->where( $q->expr->divide( 'id', 2 )  );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string|array(string) $...
      *
@@ -379,9 +379,9 @@ class DoctrineExpression implements Expression
      *                  ->where( $q->expr->in( 'id', 1, 2, 3 ) );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with less than two
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with less than two
      *         parameters.
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if the 2nd parameter is an
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if the 2nd parameter is an
      *         empty array.
      *
      * @param string $column the value that should be matched against
@@ -718,7 +718,7 @@ class DoctrineExpression implements Expression
      *     ->from( 'table' );
      * </code>
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException
      *
      * @return string
      */
@@ -754,7 +754,7 @@ class DoctrineExpression implements Expression
      * must contain a value or an expression or an array with values or
      * expressions.
      *
-     * @throws \eZ\Publish\Core\Persistence\Database\QueryException if called with no parameters.
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException if called with no parameters.
      *
      * @param string $type the type of operation, can be '+', '-', '*' or '/'.
      * @param string|array(string) $...

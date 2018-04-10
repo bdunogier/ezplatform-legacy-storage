@@ -6,12 +6,12 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway;
 
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
 use eZ\Publish\API\Repository\Values\URL\Query\SortClause;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 use eZ\Publish\SPI\Persistence\URL\URL;
 use PDO;
 
@@ -34,7 +34,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Database handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $dbHandler
      */
     protected $handler;
 
@@ -48,7 +48,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates a new Doctrine database Section Gateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $dbHandler
      * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter $criteriaConverter
      */
     public function __construct(DatabaseHandler $dbHandler, CriteriaConverter $criteriaConverter)
@@ -241,7 +241,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Creates a Url find query.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     protected function createSelectQuery()
     {

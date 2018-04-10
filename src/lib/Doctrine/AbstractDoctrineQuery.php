@@ -6,11 +6,11 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Statement;
-use eZ\Publish\Core\Persistence\Database\QueryException;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException;
 use PDO;
 
 /**
@@ -66,7 +66,7 @@ abstract class AbstractDoctrineQuery
     private $boundValuesType = array();
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Database\Expression
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\Expression
      */
     public $expr;
 
@@ -79,7 +79,7 @@ abstract class AbstractDoctrineQuery
     /**
      * Create a subselect used with the current query.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function subSelect()
     {

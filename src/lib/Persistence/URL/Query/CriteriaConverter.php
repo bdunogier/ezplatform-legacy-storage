@@ -8,7 +8,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query;
 
 use eZ\Publish\API\Repository\Exceptions\NotImplementedException;
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 
 class CriteriaConverter
 {
@@ -44,9 +44,9 @@ class CriteriaConverter
      *
      * @throws \eZ\Publish\API\Repository\Exceptions\NotImplementedException if Criterion is not applicable to its target
      *
-     * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $query
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query
      * @param \eZ\Publish\API\Repository\Values\URL\Query\Criterion $criterion
-     * @return \eZ\Publish\Core\Persistence\Database\Expression|string
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\Expression|string
      */
     public function convertCriteria(SelectQuery $query, Criterion $criterion)
     {

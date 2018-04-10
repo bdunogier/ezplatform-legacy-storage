@@ -1,11 +1,11 @@
 <?php
 
-namespace eZ\Publish\Core\Persistence\Doctrine\Tests;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\DBALException;
-use eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -15,7 +15,7 @@ abstract class TestCase extends BaseTestCase
     protected $connection;
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler
      */
     protected $handler;
 

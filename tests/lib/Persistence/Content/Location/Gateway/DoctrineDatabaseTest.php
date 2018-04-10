@@ -164,7 +164,7 @@ class DoctrineDatabaseTest extends TestCase
             )
         );
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->handler->createSelectQuery();
         $this->assertQueryResult(
             array(
@@ -202,7 +202,7 @@ class DoctrineDatabaseTest extends TestCase
             )
         );
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->handler->createSelectQuery();
         $this->assertQueryResult(
             array(
@@ -240,7 +240,7 @@ class DoctrineDatabaseTest extends TestCase
             )
         );
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->handler->createSelectQuery();
         $this->assertQueryResult(
             array(
@@ -279,7 +279,7 @@ class DoctrineDatabaseTest extends TestCase
             )
         );
 
-        /** @var $query \eZ\Publish\Core\Persistence\Database\SelectQuery */
+        /** @var $query \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery */
         $query = $this->handler->createSelectQuery();
         $this->assertQueryResult(
             array(

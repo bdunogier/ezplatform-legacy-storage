@@ -6,10 +6,10 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Doctrine;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine;
 
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
-use eZ\Publish\Core\Persistence\Database\QueryException;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\QueryException;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\DBALException;
@@ -51,7 +51,7 @@ class ConnectionHandler implements DatabaseHandler
      *
      * @param \Doctrine\DBAL\Connection $connection
      *
-     * @return \eZ\Publish\Core\Persistence\Doctrine\ConnectionHandler
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Doctrine\ConnectionHandler
      */
     public static function createFromConnection(Connection $connection)
     {
@@ -370,7 +370,7 @@ class ConnectionHandler implements DatabaseHandler
     /**
      * Create Select Query object.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\SelectQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery
      */
     public function createSelectQuery()
     {
@@ -380,7 +380,7 @@ class ConnectionHandler implements DatabaseHandler
     /**
      * Create Insert Query object.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\InsertQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\InsertQuery
      */
     public function createInsertQuery()
     {
@@ -390,7 +390,7 @@ class ConnectionHandler implements DatabaseHandler
     /**
      * Create update Query object.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\UpdateQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\UpdateQuery
      */
     public function createUpdateQuery()
     {
@@ -400,7 +400,7 @@ class ConnectionHandler implements DatabaseHandler
     /**
      * Create a Delete Query object.
      *
-     * @return \eZ\Publish\Core\Persistence\Database\DeleteQuery
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\DeleteQuery
      */
     public function createDeleteQuery()
     {
@@ -410,7 +410,7 @@ class ConnectionHandler implements DatabaseHandler
     /**
      * Creates an alias for $tableName, $columnName in $query.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $query
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query
      * @param string $columnName
      * @param string|null $tableName
      *

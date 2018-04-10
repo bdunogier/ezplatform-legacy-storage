@@ -14,21 +14,21 @@ use eZ\Publish\SPI\Persistence\Content\FieldValue;
 use eZ\Publish\SPI\Persistence\Content\Type as ContentType;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
-use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler;
 use DOMDocument;
 use PDO;
 
 class RelationListConverter implements Converter
 {
     /**
-     * @var \eZ\Publish\Core\Persistence\Database\DatabaseHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler
      */
     private $db;
 
     /**
      * Create instance of RelationList converter.
      *
-     * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $db
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\DatabaseHandler $db
      */
     public function __construct(DatabaseHandler $db)
     {

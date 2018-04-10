@@ -7,7 +7,7 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query;
 
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 
 interface CriterionHandler
 {
@@ -25,9 +25,9 @@ interface CriterionHandler
      * accept() must be called before calling this method.
      *
      * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter $converter
-     * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $query
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery $query
      * @param \eZ\Publish\API\Repository\Values\URL\Query\Criterion $criterion
-     * @return \eZ\Publish\Core\Persistence\Database\Expression|string
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Database\Expression|string
      */
     public function handle(CriteriaConverter $converter, SelectQuery $query, Criterion $criterion);
 }

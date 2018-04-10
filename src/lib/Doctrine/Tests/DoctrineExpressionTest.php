@@ -1,8 +1,8 @@
 <?php
 
-namespace eZ\Publish\Core\Persistence\Doctrine\Tests;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Doctrine\Tests;
 
-use eZ\Publish\Core\Persistence\Doctrine\DoctrineExpression;
+use EzSystems\EzPlatformLegacyStorageEngine\Doctrine\DoctrineExpression;
 
 class DoctrineExpressionTest extends TestCase
 {

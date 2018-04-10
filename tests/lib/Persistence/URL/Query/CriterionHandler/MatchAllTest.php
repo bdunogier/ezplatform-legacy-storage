@@ -8,7 +8,7 @@ namespace EzSystems\Tests\EzPlatformLegacyStorageEngine\Persistence\URL\Query\Cr
 
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion\MatchAll;
-use eZ\Publish\Core\Persistence\Database\SelectQuery;
+use EzSystems\EzPlatformLegacyStorageEngine\Database\SelectQuery;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler\MatchAll as MatchAllHandler;
 
