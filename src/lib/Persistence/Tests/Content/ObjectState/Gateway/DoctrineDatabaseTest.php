@@ -6,7 +6,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Legacy\Tests\Content\ObjectState\Gateway;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Tests\Content\ObjectState\Gateway;
 
 use eZ\Publish\Core\Persistence\Legacy\Tests\Content\LanguageAwareTestCase;
 use eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Gateway\DoctrineDatabase;

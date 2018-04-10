@@ -4,7 +4,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Legacy\URL;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL;
 
 use eZ\Publish\SPI\Persistence\URL\URL;
 use eZ\Publish\SPI\Persistence\URL\URLUpdateStruct;

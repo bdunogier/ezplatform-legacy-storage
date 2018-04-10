@@ -1,6 +1,6 @@
 <?php
 
-namespace eZ\Publish\Core\Persistence\Legacy\Tests\Content;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Tests\Content;
 
 use eZ\Publish\SPI\Persistence\Content\Language\Handler as LanguageHandler;
 use eZ\Publish\SPI\Persistence\Content\Language;

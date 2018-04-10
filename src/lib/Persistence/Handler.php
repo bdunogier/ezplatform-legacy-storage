@@ -4,7 +4,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Legacy;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence;
 
 use eZ\Publish\SPI\Persistence\Handler as HandlerInterface;
 use eZ\Publish\SPI\Persistence\Content\Handler as ContentHandler;

@@ -4,7 +4,7 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace eZ\Publish\Core\Persistence\Legacy\Tests\URL\Query\CriterionHandler;
+namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Tests\URL\Query\CriterionHandler;
 
 use eZ\Publish\Core\Persistence\Legacy\URL\Query\CriterionHandler;
 use PHPUnit\Framework\TestCase;
