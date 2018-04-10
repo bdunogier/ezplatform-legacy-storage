@@ -11,14 +11,14 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DBALException;
 use eZ\Publish\Core\Base\Exceptions\BadStateException;
-use eZ\Publish\Core\Persistence\Legacy\Content\Gateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\Gateway\DoctrineDatabase\QueryBuilder;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway\DoctrineDatabase\QueryBuilder;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
 use eZ\Publish\Core\Persistence\Database\UpdateQuery;
 use eZ\Publish\Core\Persistence\Database\InsertQuery;
 use eZ\Publish\Core\Persistence\Database\SelectQuery;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue;
-use eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator as LanguageMaskGenerator;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator as LanguageMaskGenerator;
 use eZ\Publish\SPI\Persistence\Content;
 use eZ\Publish\SPI\Persistence\Content\CreateStruct;
 use eZ\Publish\SPI\Persistence\Content\UpdateStruct;
@@ -58,21 +58,21 @@ class DoctrineDatabase extends Gateway
     /**
      * Query builder.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Gateway\DoctrineDatabase\QueryBuilder
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway\DoctrineDatabase\QueryBuilder
      */
     protected $queryBuilder;
 
     /**
      * Caching language handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\CachingHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\CachingHandler
      */
     protected $languageHandler;
 
     /**
      * Language mask generator.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator
      */
     protected $languageMaskGenerator;
 
@@ -81,9 +81,9 @@ class DoctrineDatabase extends Gateway
      *
      * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $db
      * @param \Doctrine\DBAL\Connection $connection
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Gateway\DoctrineDatabase\QueryBuilder $queryBuilder
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway\DoctrineDatabase\QueryBuilder $queryBuilder
      * @param \eZ\Publish\SPI\Persistence\Content\Language\Handler $languageHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator $languageMaskGenerator
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator $languageMaskGenerator
      */
     public function __construct(
         DatabaseHandler $db,
@@ -612,7 +612,7 @@ class DoctrineDatabase extends Gateway
      *
      * @param \eZ\Publish\SPI\Persistence\Content $content
      * @param \eZ\Publish\SPI\Persistence\Content\Field $field
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $value
      *
      * @return int ID
      */
@@ -788,7 +788,7 @@ class DoctrineDatabase extends Gateway
      * Updates an existing, non-translatable field.
      *
      * @param \eZ\Publish\SPI\Persistence\Content\Field $field
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $value
      * @param int $contentId
      */
     public function updateNonTranslatableField(
@@ -1699,7 +1699,7 @@ class DoctrineDatabase extends Gateway
      * @param int $toContentId
      * @param int $relationType
      *
-     * @return mixed[][] Content data, array structured like {@see \eZ\Publish\Core\Persistence\Legacy\Content\Gateway::load()}
+     * @return mixed[][] Content data, array structured like {@see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway::load()}
      */
     public function loadReverseRelations($toContentId, $relationType = null)
     {

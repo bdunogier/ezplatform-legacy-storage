@@ -8,13 +8,13 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway;
 use eZ\Publish\SPI\Persistence\Content\Type;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 use eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct;
 use eZ\Publish\SPI\Persistence\Content\Type\Group;
 use eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct as GroupUpdateStruct;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
 use Doctrine\DBAL\DBALException;
 use PDOException;
 use RuntimeException;
@@ -272,7 +272,7 @@ class ExceptionConversion extends Gateway
      * @param mixed $typeId
      * @param int $status
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageFieldDef
      *
      * @return mixed Field definition ID
      */
@@ -315,7 +315,7 @@ class ExceptionConversion extends Gateway
      * @param mixed $typeId
      * @param int $status
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageFieldDef
      */
     public function updateFieldDefinition(
         $typeId,

@@ -22,22 +22,22 @@ class Handler implements BaseLanguageHandler
     /**
      * Language Gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Gateway
      */
     protected $languageGateway;
 
     /**
      * Language Mapper.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Mapper
      */
     protected $languageMapper;
 
     /**
      * Creates a new Language Handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Language\Gateway $languageGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Language\Mapper $languageMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Gateway $languageGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Mapper $languageMapper
      */
     public function __construct(Gateway $languageGateway, Mapper $languageMapper)
     {

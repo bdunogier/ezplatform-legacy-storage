@@ -8,7 +8,7 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\UrlWildcard\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway;
 use eZ\Publish\SPI\Persistence\Content\UrlWildcard;
 use Doctrine\DBAL\DBALException;
 use PDOException;
@@ -21,14 +21,14 @@ class ExceptionConversion extends Gateway
     /**
      * The wrapped gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\UrlWildcard\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway
      */
     protected $innerGateway;
 
     /**
      * Creates a new exception conversion gateway around $innerGateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\UrlWildcard\Gateway $innerGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway $innerGateway
      */
     public function __construct(Gateway $innerGateway)
     {

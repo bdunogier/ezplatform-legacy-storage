@@ -8,11 +8,11 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue;
 use eZ\Publish\SPI\Persistence\Content\FieldValue;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
 
 /**
  * The Null converter does not perform any conversions at all.
@@ -26,7 +26,7 @@ class NullConverter implements Converter
      *
      * @deprecated since 6.8, will be removed in 7.x, use default constructor instead.
      *
-     * @return \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\NullConverter
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\NullConverter
      */
     public static function create()
     {
@@ -37,7 +37,7 @@ class NullConverter implements Converter
      * Converts data from $value to $storageFieldValue.
      *
      * @param \eZ\Publish\SPI\Persistence\Content\FieldValue $value
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $storageFieldValue
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $storageFieldValue
      */
     public function toStorageValue(FieldValue $value, StorageFieldValue $storageFieldValue)
     {
@@ -48,7 +48,7 @@ class NullConverter implements Converter
     /**
      * Converts data from $value to $fieldValue.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $value
      * @param \eZ\Publish\SPI\Persistence\Content\FieldValue $fieldValue
      */
     public function toFieldValue(StorageFieldValue $value, FieldValue $fieldValue)
@@ -61,7 +61,7 @@ class NullConverter implements Converter
      * Converts field definition data in $fieldDef into $storageFieldDef.
      *
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageDef
      */
     public function toStorageFieldDefinition(FieldDefinition $fieldDef, StorageFieldDefinition $storageDef)
     {
@@ -72,7 +72,7 @@ class NullConverter implements Converter
     /**
      * Converts field definition data in $storageDef into $fieldDef.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageDef
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef
      */
     public function toFieldDefinition(StorageFieldDefinition $storageDef, FieldDefinition $fieldDef)

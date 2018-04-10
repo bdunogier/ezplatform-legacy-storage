@@ -8,14 +8,14 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater\Action;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater\Action;
 use eZ\Publish\SPI\Persistence\Content;
 use eZ\Publish\SPI\Persistence\Content\Field;
-use eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue;
-use eZ\Publish\Core\Persistence\Legacy\Content\Gateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Mapper as ContentMapper;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper as ContentMapper;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 
 /**
@@ -33,30 +33,30 @@ class AddField extends Action
     /**
      * Storage handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler
      */
     protected $storageHandler;
 
     /**
      * Field value converter.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter
      */
     protected $fieldValueConverter;
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper
      */
     protected $contentMapper;
 
     /**
      * Creates a new action.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway $contentGateway
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter $converter
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler $storageHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Mapper $contentMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter $converter
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler $storageHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper $contentMapper
      */
     public function __construct(
         Gateway $contentGateway,

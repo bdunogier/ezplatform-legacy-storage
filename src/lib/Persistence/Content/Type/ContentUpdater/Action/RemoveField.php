@@ -8,10 +8,10 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater\Action;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action;
-use eZ\Publish\Core\Persistence\Legacy\Content\Gateway as ContentGateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Mapper as ContentMapper;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater\Action;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway as ContentGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper as ContentMapper;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 
 /**
@@ -29,22 +29,22 @@ class RemoveField extends Action
     /**
      * Storage handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler
      */
     protected $storageHandler;
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper
      */
     protected $contentMapper;
 
     /**
      * Creates a new action.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway $contentGateway
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler $storageHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Mapper $contentMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler $storageHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper $contentMapper
      */
     public function __construct(
         ContentGateway $contentGateway,

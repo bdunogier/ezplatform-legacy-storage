@@ -8,8 +8,8 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Gateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue;
 use eZ\Publish\SPI\Persistence\Content;
 use eZ\Publish\SPI\Persistence\Content\CreateStruct;
 use eZ\Publish\SPI\Persistence\Content\UpdateStruct;
@@ -181,7 +181,7 @@ class ExceptionConversion extends Gateway
      *
      * @param \eZ\Publish\SPI\Persistence\Content $content
      * @param \eZ\Publish\SPI\Persistence\Content\Field $field
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $value
      *
      * @return int ID
      */
@@ -237,7 +237,7 @@ class ExceptionConversion extends Gateway
      * Updates an existing, non-translatable field.
      *
      * @param \eZ\Publish\SPI\Persistence\Content\Field $field
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $value
      * @param int $contentId
      */
     public function updateNonTranslatableField(
@@ -616,7 +616,7 @@ class ExceptionConversion extends Gateway
      * @param int $contentVersionNo
      * @param int $relationType
      *
-     * @return mixed[][] Content data, array structured like {@see \eZ\Publish\Core\Persistence\Legacy\Content\Gateway::load()}
+     * @return mixed[][] Content data, array structured like {@see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway::load()}
      */
     public function loadRelations($contentId, $contentVersionNo = null, $relationType = null)
     {
@@ -637,7 +637,7 @@ class ExceptionConversion extends Gateway
      * @param int $contentVersionNo
      * @param int $relationType
      *
-     * @return mixed[][] Content data, array structured like {@see \eZ\Publish\Core\Persistence\Legacy\Content\Gateway::load()}
+     * @return mixed[][] Content data, array structured like {@see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway::load()}
      */
     public function loadReverseRelations($contentId, $relationType = null)
     {

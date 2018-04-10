@@ -13,11 +13,11 @@ use eZ\Publish\SPI\Persistence\Content\Location;
 use eZ\Publish\SPI\Persistence\Content\Location\CreateStruct;
 use eZ\Publish\SPI\Persistence\Content\Location\UpdateStruct;
 use eZ\Publish\SPI\Persistence\Content\Location\Handler as BaseLocationHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Handler as ContentHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\TreeHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Handler as ObjectStateHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway as LocationGateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper as LocationMapper;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Handler as ContentHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\TreeHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Handler as ObjectStateHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway as LocationGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper as LocationMapper;
 use eZ\Publish\SPI\Persistence\Content\MetadataUpdateStruct;
 
 /**
@@ -28,48 +28,48 @@ class Handler implements BaseLocationHandler
     /**
      * Gateway for handling location data.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway
      */
     protected $locationGateway;
 
     /**
      * Location locationMapper.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper
      */
     protected $locationMapper;
 
     /**
      * Content handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Handler
      */
     protected $contentHandler;
 
     /**
      * Object state handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Handler
      */
     protected $objectStateHandler;
 
     /**
      * Tree handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\TreeHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\TreeHandler
      */
     protected $treeHandler;
 
     /**
      * Construct from userGateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway $locationGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper $locationMapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Handler $contentHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Handler $objectStateHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\TreeHandler $treeHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway $locationGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper $locationMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Handler $contentHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Handler $objectStateHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\TreeHandler $treeHandler
      *
-     * @return \eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Handler
      */
     public function __construct(
         LocationGateway $locationGateway,

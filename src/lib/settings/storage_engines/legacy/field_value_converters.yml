@@ -1,32 +1,32 @@
 parameters:
-    ezpublish.persistence.legacy.field_value_converter.registry.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry
+    ezpublish.persistence.legacy.field_value_converter.registry.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry
 
-    ezpublish.fieldType.ezauthor.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\AuthorConverter
-    ezpublish.fieldType.ezbinaryfile.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\BinaryFileConverter
-    ezpublish.fieldType.ezboolean.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\CheckboxConverter
-    ezpublish.fieldType.ezcountry.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\CountryConverter
-    ezpublish.fieldType.ezdatetime.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\DateAndTimeConverter
-    ezpublish.fieldType.ezdate.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\DateConverter
-    ezpublish.fieldType.eztime.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\TimeConverter
-    ezpublish.fieldType.ezemail.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\EmailAddressConverter
-    ezpublish.fieldType.ezfloat.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\FloatConverter
-    ezpublish.fieldType.ezgmaplocation.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\MapLocationConverter
-    ezpublish.fieldType.ezinteger.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\IntegerConverter
-    ezpublish.fieldType.ezimage.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\ImageConverter
-    ezpublish.fieldType.ezisbn.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\ISBNConverter
-    ezpublish.fieldType.ezkeyword.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\KeywordConverter
-    ezpublish.fieldType.ezmedia.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\MediaConverter
-    ezpublish.fieldType.ezobjectrelation.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\RelationConverter
-    ezpublish.fieldType.ezobjectrelationlist.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\RelationListConverter
-    ezpublish.fieldType.ezselection.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\SelectionConverter
-    ezpublish.fieldType.ezstring.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\TextLineConverter
-    ezpublish.fieldType.eztext.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\TextBlockConverter
-    ezpublish.fieldType.ezrichtext.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\RichTextConverter
-    ezpublish.fieldType.ezsrrating.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\RatingConverter
-    ezpublish.fieldType.ezurl.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\UrlConverter
-    ezpublish.fieldType.ezuser.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\NullConverter
-    ezpublish.fieldType.ezpage.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\PageConverter
-    ezpublish.fieldType.eznull.converter.class: eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\NullConverter
+    ezpublish.fieldType.ezauthor.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\AuthorConverter
+    ezpublish.fieldType.ezbinaryfile.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\BinaryFileConverter
+    ezpublish.fieldType.ezboolean.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\CheckboxConverter
+    ezpublish.fieldType.ezcountry.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\CountryConverter
+    ezpublish.fieldType.ezdatetime.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\DateAndTimeConverter
+    ezpublish.fieldType.ezdate.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\DateConverter
+    ezpublish.fieldType.eztime.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\TimeConverter
+    ezpublish.fieldType.ezemail.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\EmailAddressConverter
+    ezpublish.fieldType.ezfloat.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\FloatConverter
+    ezpublish.fieldType.ezgmaplocation.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\MapLocationConverter
+    ezpublish.fieldType.ezinteger.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\IntegerConverter
+    ezpublish.fieldType.ezimage.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\ImageConverter
+    ezpublish.fieldType.ezisbn.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\ISBNConverter
+    ezpublish.fieldType.ezkeyword.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\KeywordConverter
+    ezpublish.fieldType.ezmedia.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\MediaConverter
+    ezpublish.fieldType.ezobjectrelation.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\RelationConverter
+    ezpublish.fieldType.ezobjectrelationlist.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\RelationListConverter
+    ezpublish.fieldType.ezselection.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\SelectionConverter
+    ezpublish.fieldType.ezstring.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\TextLineConverter
+    ezpublish.fieldType.eztext.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\TextBlockConverter
+    ezpublish.fieldType.ezrichtext.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\RichTextConverter
+    ezpublish.fieldType.ezsrrating.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\RatingConverter
+    ezpublish.fieldType.ezurl.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\UrlConverter
+    ezpublish.fieldType.ezuser.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\NullConverter
+    ezpublish.fieldType.ezpage.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\PageConverter
+    ezpublish.fieldType.eznull.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\NullConverter
 
 services:
     # Note: converter services tagged with 'ezpublish.storageEngine.legacy.converter' are

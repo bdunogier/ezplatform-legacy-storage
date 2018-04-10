@@ -8,7 +8,7 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Gateway as ContentGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway as ContentGateway;
 
 /**
  * Updater action base class.
@@ -18,14 +18,14 @@ abstract class Action
     /**
      * Content gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway
      */
     protected $contentGateway;
 
     /**
      * Creates a new action.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway $contentGateway
      */
     public function __construct(ContentGateway $contentGateway)
     {

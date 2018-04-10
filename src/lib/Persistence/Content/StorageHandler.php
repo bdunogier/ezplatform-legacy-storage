@@ -19,7 +19,7 @@ class StorageHandler
     /**
      * Storage registry.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\StorageRegistry
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageRegistry
      */
     protected $storageRegistry;
 

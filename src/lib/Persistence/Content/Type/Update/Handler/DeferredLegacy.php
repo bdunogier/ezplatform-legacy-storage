@@ -8,8 +8,8 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Update\Handler;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Update\Handler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway;
 use eZ\Publish\SPI\Persistence\Content\Type;
 
 /**
@@ -18,14 +18,14 @@ use eZ\Publish\SPI\Persistence\Content\Type;
 class DeferredLegacy extends Handler
 {
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway
      */
     protected $contentTypeGateway;
 
     /**
      * Creates a new content type update handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway $contentTypeGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway $contentTypeGateway
      */
     public function __construct(Gateway $contentTypeGateway)
     {

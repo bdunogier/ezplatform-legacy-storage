@@ -8,7 +8,7 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\User\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Gateway;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
 use eZ\Publish\SPI\Persistence\User;
 use eZ\Publish\SPI\Persistence\User\UserTokenUpdateStruct;

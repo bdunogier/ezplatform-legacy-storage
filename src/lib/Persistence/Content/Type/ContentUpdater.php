@@ -8,10 +8,10 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Gateway as ContentGateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry as Registry;
-use eZ\Publish\Core\Persistence\Legacy\Content\Mapper as ContentMapper;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway as ContentGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry as Registry;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper as ContentMapper;
 use eZ\Publish\SPI\Persistence\Content\Type;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 
@@ -23,36 +23,36 @@ class ContentUpdater
     /**
      * Content gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway
      */
     protected $contentGateway;
 
     /**
      * FieldValue converter registry.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry
      */
     protected $converterRegistry;
 
     /**
      * Storage handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler
      */
     protected $storageHandler;
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper
      */
     protected $contentMapper;
 
     /**
      * Creates a new content updater.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry $converterRegistry
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler $storageHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Mapper $contentMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway $contentGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry $converterRegistry
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler $storageHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper $contentMapper
      */
     public function __construct(
         ContentGateway $contentGateway,
@@ -72,7 +72,7 @@ class ContentUpdater
      * @param \eZ\Publish\SPI\Persistence\Content\Type $fromType
      * @param \eZ\Publish\SPI\Persistence\Content\Type $toType
      *
-     * @return \eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action[]
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater\Action[]
      */
     public function determineActions(Type $fromType, Type $toType)
     {
@@ -127,7 +127,7 @@ class ContentUpdater
      * Applies all given updates.
      *
      * @param mixed $contentTypeId
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater\Action[] $actions
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater\Action[] $actions
      */
     public function applyUpdates($contentTypeId, array $actions)
     {

@@ -9,15 +9,15 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway;
 
 use Doctrine\DBAL\Connection;
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator;
 use eZ\Publish\SPI\Persistence\Content\Type;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 use eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct;
 use eZ\Publish\SPI\Persistence\Content\Type\Group;
 use eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct as GroupUpdateStruct;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
 use eZ\Publish\SPI\Persistence\ValueObject;
 use eZ\Publish\Core\Persistence\Database\Query;
 use eZ\Publish\Core\Persistence\Database\SelectQuery;
@@ -103,7 +103,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Language mask generator.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator
      */
     protected $languageMaskGenerator;
 
@@ -112,7 +112,7 @@ class DoctrineDatabase extends Gateway
      *
      * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $db
      * @param \Doctrine\DBAL\Connection $connection
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator $languageMaskGenerator
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator $languageMaskGenerator
      */
     public function __construct(DatabaseHandler $db, Connection $connection, MaskGenerator $languageMaskGenerator)
     {
@@ -600,7 +600,7 @@ class DoctrineDatabase extends Gateway
      * @param mixed $typeId
      * @param int $status
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageFieldDef
      *
      * @return mixed Field definition ID
      */
@@ -640,7 +640,7 @@ class DoctrineDatabase extends Gateway
      *
      * @param \eZ\Publish\Core\Persistence\Database\InsertQuery|\eZ\Publish\Core\Persistence\Database\UpdateQuery $q
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageFieldDef
      */
     protected function setCommonFieldColumns(
         Query $q,
@@ -794,7 +794,7 @@ class DoctrineDatabase extends Gateway
      * @param mixed $typeId
      * @param int $status
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDefinition
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageFieldDef
      */
     public function updateFieldDefinition(
         $typeId,

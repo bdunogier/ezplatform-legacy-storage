@@ -8,7 +8,7 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
 
 /**

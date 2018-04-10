@@ -8,10 +8,10 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway as LocationGateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper as LocationMapper;
-use eZ\Publish\Core\Persistence\Legacy\Content\Gateway as ContentGateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\Mapper as ContentMapper;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway as LocationGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper as LocationMapper;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway as ContentGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper as ContentMapper;
 
 /**
  * The TreeHandler is an intersect between ContentHandler and LocationHandler,
@@ -22,44 +22,44 @@ class TreeHandler
     /**
      * Gateway for handling location data.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway
      */
     protected $locationGateway;
 
     /**
      * Location Mapper.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper
      */
     protected $locationMapper;
 
     /**
      * Content gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway
      */
     protected $contentGateway;
 
     /**
      * Content handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper
      */
     protected $contentMapper;
 
     /**
      * FieldHandler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\FieldHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldHandler
      */
     protected $fieldHandler;
 
     /**
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway $locationGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper $locationMapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Mapper $contentMapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\FieldHandler $fieldHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway $locationGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper $locationMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway $contentGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper $contentMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldHandler $fieldHandler
      */
     public function __construct(
         LocationGateway $locationGateway,

@@ -14,7 +14,7 @@ use eZ\Publish\SPI\Persistence\Content\Field;
 use eZ\Publish\SPI\Persistence\Content\FieldValue;
 use eZ\Publish\SPI\Persistence\Content\Relation;
 use eZ\Publish\SPI\Persistence\Content\Relation\CreateStruct as RelationCreateStruct;
-use eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry as Registry;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry as Registry;
 use eZ\Publish\SPI\Persistence\Content\Language\Handler as LanguageHandler;
 use eZ\Publish\SPI\Persistence\Content\ContentInfo;
 use eZ\Publish\SPI\Persistence\Content\VersionInfo;
@@ -29,7 +29,7 @@ class Mapper
     /**
      * FieldValue converter registry.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry
      */
     protected $converterRegistry;
 
@@ -43,7 +43,7 @@ class Mapper
     /**
      * Creates a new mapper.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry $converterRegistry
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry $converterRegistry
      * @param \eZ\Publish\SPI\Persistence\Content\Language\Handler $languageHandler
      */
     public function __construct(Registry $converterRegistry, LanguageHandler $languageHandler)
@@ -150,7 +150,7 @@ class Mapper
      *
      * @param \eZ\Publish\SPI\Persistence\Content\Field $field
      *
-     * @return \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue
      */
     public function convertToStorageValue(Field $field)
     {
@@ -400,7 +400,7 @@ class Mapper
      *
      * @return \eZ\Publish\SPI\Persistence\Content\FieldValue
      *
-     * @throws \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\Exception\NotFound
+     * @throws \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\Exception\NotFound
      *         if the necessary converter for $type could not be found.
      */
     protected function extractFieldValueFromRow(array $row, $type)

@@ -10,7 +10,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue
 
 use eZ\Publish\Core\FieldType\Media\Type as MediaType;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
 use eZ\Publish\Core\FieldType\FieldSettings;
 
 class MediaConverter extends BinaryFileConverter
@@ -22,7 +22,7 @@ class MediaConverter extends BinaryFileConverter
      *
      * @deprecated since 6.8, will be removed in 7.x, use default constructor instead.
      *
-     * @return \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\Converter\MediaConverter
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\Converter\MediaConverter
      */
     public static function create()
     {
@@ -33,7 +33,7 @@ class MediaConverter extends BinaryFileConverter
      * Converts field definition data in $fieldDef into $storageFieldDef.
      *
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageDef
      */
     public function toStorageFieldDefinition(FieldDefinition $fieldDef, StorageFieldDefinition $storageDef)
     {
@@ -47,7 +47,7 @@ class MediaConverter extends BinaryFileConverter
     /**
      * Converts field definition data in $storageDef into $fieldDef.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageDef
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef
      */
     public function toFieldDefinition(StorageFieldDefinition $storageDef, FieldDefinition $fieldDef)

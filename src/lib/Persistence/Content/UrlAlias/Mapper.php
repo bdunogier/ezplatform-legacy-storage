@@ -9,7 +9,7 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias;
 
 use eZ\Publish\SPI\Persistence\Content\UrlAlias;
-use eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator as LanguageMaskGenerator;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator as LanguageMaskGenerator;
 
 /**
  * UrlAlias Mapper.
@@ -19,14 +19,14 @@ class Mapper
     /**
      * Language mask generator.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator
      */
     protected $languageMaskGenerator;
 
     /**
      * Creates a new UrlWildcard Handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator $languageMaskGenerator
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator $languageMaskGenerator
      */
     public function __construct(LanguageMaskGenerator $languageMaskGenerator)
     {

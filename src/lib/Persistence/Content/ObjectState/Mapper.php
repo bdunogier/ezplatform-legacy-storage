@@ -21,7 +21,7 @@ class Mapper
     /**
      * Language handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Handler
      */
     protected $languageHandler;
 

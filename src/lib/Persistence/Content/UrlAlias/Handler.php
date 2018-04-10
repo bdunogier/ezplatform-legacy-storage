@@ -12,7 +12,7 @@ use eZ\Publish\Core\Base\Exceptions\InvalidArgumentException;
 use eZ\Publish\SPI\Persistence\Content\UrlAlias;
 use eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler as UrlAliasHandlerInterface;
 use eZ\Publish\SPI\Persistence\Content\Language\Handler as LanguageHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway as LocationGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway as LocationGateway;
 use eZ\Publish\Core\Base\Exceptions\NotFoundException;
 use eZ\Publish\Core\Base\Exceptions\ForbiddenException;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
@@ -44,46 +44,46 @@ class Handler implements UrlAliasHandlerInterface
     /**
      * UrlAlias Gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway
      */
     protected $gateway;
 
     /**
      * Gateway for handling location data.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway
      */
     protected $locationGateway;
 
     /**
      * UrlAlias Mapper.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Mapper
      */
     protected $mapper;
 
     /**
      * Caching language handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\CachingHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\CachingHandler
      */
     protected $languageHandler;
 
     /**
      * URL slug converter.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\SlugConverter
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\SlugConverter
      */
     protected $slugConverter;
 
     /**
      * Creates a new UrlAlias Handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Gateway $gateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Mapper $mapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway $locationGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway $gateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Mapper $mapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway $locationGateway
      * @param \eZ\Publish\SPI\Persistence\Content\Language\Handler $languageHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\SlugConverter $slugConverter
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\SlugConverter $slugConverter
      */
     public function __construct(
         Gateway $gateway,
@@ -123,7 +123,7 @@ class Handler implements UrlAliasHandlerInterface
      * Internal publish method, accepting language ID instead of language code and optionally
      * new alias ID (used when swapping Locations).
      *
-     * @see \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler::locationSwapped()
+     * @see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Handler::locationSwapped()
      *
      * @param int $locationId
      * @param int $parentLocationId
@@ -678,7 +678,7 @@ class Handler implements UrlAliasHandlerInterface
      * We need to historize everything separately per language (mask), in case the entries
      * remain history future publishing reusages need to be able to take them over cleanly.
      *
-     * @see \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler::locationSwapped()
+     * @see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Handler::locationSwapped()
      *
      * @param array $location1Entries
      * @param array $location2Entries

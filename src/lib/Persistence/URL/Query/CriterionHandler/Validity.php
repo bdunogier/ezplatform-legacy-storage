@@ -7,8 +7,8 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler;
 
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
-use eZ\Publish\Core\Persistence\Legacy\URL\Query\CriteriaConverter;
-use eZ\Publish\Core\Persistence\Legacy\URL\Query\CriterionHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler;
 use eZ\Publish\Core\Persistence\Database\SelectQuery;
 
 class Validity implements CriterionHandler

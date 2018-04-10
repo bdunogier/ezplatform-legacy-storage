@@ -9,8 +9,8 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway;
 use eZ\Publish\Core\Persistence\Database\SelectQuery;
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
 use eZ\Publish\API\Repository\Values\URL\Query\SortClause;
-use eZ\Publish\Core\Persistence\Legacy\URL\Gateway;
-use eZ\Publish\Core\Persistence\Legacy\URL\Query\CriteriaConverter;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
 use eZ\Publish\SPI\Persistence\URL\URL;
 use PDO;
@@ -41,7 +41,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Criteria converter.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\URL\Query\CriteriaConverter
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter
      */
     protected $criteriaConverter;
 
@@ -49,7 +49,7 @@ class DoctrineDatabase extends Gateway
      * Creates a new Doctrine database Section Gateway.
      *
      * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\URL\Query\CriteriaConverter $criteriaConverter
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter $criteriaConverter
      */
     public function __construct(DatabaseHandler $dbHandler, CriteriaConverter $criteriaConverter)
     {

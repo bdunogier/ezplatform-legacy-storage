@@ -1,9 +1,9 @@
 parameters:
-    ezpublish.persistence.legacy.url.gateway.inner.class: eZ\Publish\Core\Persistence\Legacy\URL\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.url.gateway.exception_conversion.class: eZ\Publish\Core\Persistence\Legacy\URL\Gateway\ExceptionConversion
-    ezpublish.persistence.legacy.url.mapper.class: eZ\Publish\Core\Persistence\Legacy\URL\Mapper
-    ezpublish.spi.persistence.legacy.url.handler.class: eZ\Publish\Core\Persistence\Legacy\URL\Handler
-    ezpublish.spi.persistence.legacy.url.criterion_converter.class: eZ\Publish\Core\Persistence\Legacy\URL\Query\CriteriaConverter
+    ezpublish.persistence.legacy.url.gateway.inner.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway\DoctrineDatabase
+    ezpublish.persistence.legacy.url.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway\ExceptionConversion
+    ezpublish.persistence.legacy.url.mapper.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Mapper
+    ezpublish.spi.persistence.legacy.url.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Handler
+    ezpublish.spi.persistence.legacy.url.criterion_converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter
 
 services:
     ezpublish.persistence.legacy.url.gateway.inner:

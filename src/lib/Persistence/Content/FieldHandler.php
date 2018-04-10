@@ -25,26 +25,26 @@ class FieldHandler
     /**
      * Content Gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway
      */
     protected $contentGateway;
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Handler
      */
     protected $languageHandler;
 
     /**
      * Content Mapper.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper
      */
     protected $mapper;
 
     /**
      * Storage Handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler
      */
     protected $storageHandler;
 
@@ -65,9 +65,9 @@ class FieldHandler
     /**
      * Creates a new Field Handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Mapper $mapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageHandler $storageHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway $contentGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper $mapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageHandler $storageHandler
      * @param \eZ\Publish\SPI\Persistence\Content\Language\Handler $languageHandler
      * @param \eZ\Publish\Core\Persistence\FieldTypeRegistry $fieldTypeRegistry
      */

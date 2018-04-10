@@ -8,11 +8,11 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway as LocationGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway as LocationGateway;
 use eZ\Publish\SPI\Persistence\Content\Handler as BaseContentHandler;
 use eZ\Publish\SPI\Persistence\Content\Type\Handler as ContentTypeHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\SlugConverter;
-use eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Gateway as UrlAliasGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\SlugConverter;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway as UrlAliasGateway;
 use eZ\Publish\SPI\Persistence\Content;
 use eZ\Publish\SPI\Persistence\Content\CreateStruct;
 use eZ\Publish\SPI\Persistence\Content\UpdateStruct;
@@ -29,14 +29,14 @@ class Handler implements BaseContentHandler
     /**
      * Content gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway
      */
     protected $contentGateway;
 
     /**
      * Location gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway
      */
     protected $locationGateway;
 
@@ -50,21 +50,21 @@ class Handler implements BaseContentHandler
     /**
      * FieldHandler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\FieldHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldHandler
      */
     protected $fieldHandler;
 
     /**
      * URL slug converter.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\SlugConverter
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\SlugConverter
      */
     protected $slugConverter;
 
     /**
      * UrlAlias gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway
      */
     protected $urlAliasGateway;
 
@@ -78,21 +78,21 @@ class Handler implements BaseContentHandler
     /**
      * Tree handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\TreeHandler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\TreeHandler
      */
     protected $treeHandler;
 
     /**
      * Creates a new content handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Gateway $contentGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway $locationGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Mapper $mapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\FieldHandler $fieldHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\SlugConverter $slugConverter
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Gateway $urlAliasGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway $contentGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway $locationGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper $mapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldHandler $fieldHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\SlugConverter $slugConverter
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway $urlAliasGateway
      * @param \eZ\Publish\SPI\Persistence\Content\Type\Handler $contentTypeHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\TreeHandler $treeHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\TreeHandler $treeHandler
      */
     public function __construct(
         Gateway $contentGateway,

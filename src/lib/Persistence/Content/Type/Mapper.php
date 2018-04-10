@@ -14,8 +14,8 @@ use eZ\Publish\SPI\Persistence\Content\Type\UpdateStruct;
 use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 use eZ\Publish\SPI\Persistence\Content\Type\Group;
 use eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct as GroupCreateStruct;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition;
-use eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry;
 
 /**
  * Mapper for Content Type Handler.
@@ -27,14 +27,14 @@ class Mapper
     /**
      * Converter registry.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry
      */
     protected $converterRegistry;
 
     /**
      * Creates a new content type mapper.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\FieldValue\ConverterRegistry $converterRegistry
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue\ConverterRegistry $converterRegistry
      */
     public function __construct(ConverterRegistry $converterRegistry)
     {
@@ -211,7 +211,7 @@ class Mapper
      *
      * @param array $row
      *
-     * @return \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition
      */
     protected function extractStorageFieldFromRow(array $row)
     {
@@ -349,7 +349,7 @@ class Mapper
      * Maps $fieldDef to the legacy storage specific StorageFieldDefinition.
      *
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageFieldDef
      */
     public function toStorageFieldDefinition(
         FieldDefinition $fieldDef,
@@ -367,7 +367,7 @@ class Mapper
     /**
      * Maps a FieldDefinition from the given $storageFieldDef.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition $storageFieldDef
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition $storageFieldDef
      * @param \eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition $fieldDef
      */
     public function toFieldDefinition(

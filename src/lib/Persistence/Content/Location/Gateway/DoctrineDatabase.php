@@ -8,7 +8,7 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
 use eZ\Publish\Core\Persistence\Database\SelectQuery;
 use eZ\Publish\Core\Persistence\Database\Query as DatabaseQuery;
@@ -148,7 +148,7 @@ class DoctrineDatabase extends Gateway
     }
 
     /**
-     * @see \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway::loadParentLocationsDataForDraftContent
+     * @see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway::loadParentLocationsDataForDraftContent
      */
     public function loadParentLocationsDataForDraftContent($contentId, $drafts = null)
     {

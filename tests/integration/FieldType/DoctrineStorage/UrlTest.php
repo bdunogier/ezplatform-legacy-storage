@@ -9,7 +9,7 @@
 namespace EzSystems\IntegrationTests\EzPlatformLegacyStorageEngine\FieldType\DoctrineStorage;
 
 use eZ\Publish\Core\FieldType\Url\UrlStorage\Gateway\Url;
-use eZ\Publish\Core\Persistence\Legacy\Tests\TestCase;
+use EzSystems\Tests\EzPlatformLegacyStorageEngine\Persistence\TestCase;
 
 /**
  * Url DoctrineStorage gateway tests.

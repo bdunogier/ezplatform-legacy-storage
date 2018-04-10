@@ -1,8 +1,8 @@
 parameters:
-    ezpublish.spi.persistence.legacy.location.handler.class: eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler
-    ezpublish.persistence.legacy.location.gateway.class: eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.location.gateway.exception_conversion.class: eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway\ExceptionConversion
-    ezpublish.persistence.legacy.location.mapper.class: eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper
+    ezpublish.spi.persistence.legacy.location.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Handler
+    ezpublish.persistence.legacy.location.gateway.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway\DoctrineDatabase
+    ezpublish.persistence.legacy.location.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway\ExceptionConversion
+    ezpublish.persistence.legacy.location.mapper.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper
 
 services:
     ezpublish.persistence.legacy.location.gateway.inner:

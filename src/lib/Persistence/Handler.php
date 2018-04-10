@@ -18,7 +18,7 @@ use eZ\Publish\SPI\Persistence\Content\UrlAlias\Handler as UrlAliasHandler;
 use eZ\Publish\SPI\Persistence\Content\UrlWildcard\Handler as UrlWildcardHandler;
 use eZ\Publish\SPI\Persistence\User\Handler as UserHandler;
 use eZ\Publish\SPI\Persistence\TransactionHandler as SPITransactionHandler;
-use eZ\Publish\Core\Persistence\Legacy\URL\Handler as UrlHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Handler as UrlHandler;
 
 /**
  * The main handler for Legacy Storage Engine.
@@ -81,7 +81,7 @@ class Handler implements HandlerInterface
     protected $userHandler;
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\URL\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Handler
      */
     protected $urlHandler;
 

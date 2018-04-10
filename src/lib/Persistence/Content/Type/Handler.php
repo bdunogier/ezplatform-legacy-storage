@@ -16,9 +16,9 @@ use eZ\Publish\SPI\Persistence\Content\Type\FieldDefinition;
 use eZ\Publish\SPI\Persistence\Content\Type\Group;
 use eZ\Publish\SPI\Persistence\Content\Type\Group\CreateStruct as GroupCreateStruct;
 use eZ\Publish\SPI\Persistence\Content\Type\Group\UpdateStruct as GroupUpdateStruct;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldDefinition;
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler as UpdateHandler;
-use eZ\Publish\Core\Persistence\Legacy\Exception;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldDefinition;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Update\Handler as UpdateHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Exception;
 use eZ\Publish\Core\Base\Exceptions\NotFoundException;
 use eZ\Publish\Core\Base\Exceptions\BadStateException;
 use eZ\Publish\Core\Base\Exceptions\InvalidArgumentException;
@@ -26,7 +26,7 @@ use eZ\Publish\Core\Base\Exceptions\InvalidArgumentException;
 class Handler implements BaseContentTypeHandler
 {
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway
      */
     protected $contentTypeGateway;
 
@@ -40,16 +40,16 @@ class Handler implements BaseContentTypeHandler
     /**
      * Content Type update handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Update\Handler
      */
     protected $updateHandler;
 
     /**
      * Creates a new content type handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway $contentTypeGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Type\Mapper $mapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler $updateHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway $contentTypeGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Mapper $mapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Update\Handler $updateHandler
      */
     public function __construct(
         Gateway $contentTypeGateway,

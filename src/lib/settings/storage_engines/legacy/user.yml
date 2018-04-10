@@ -1,13 +1,13 @@
 parameters:
-    ezpublish.spi.persistence.legacy.user.handler.class: eZ\Publish\Core\Persistence\Legacy\User\Handler
-    ezpublish.persistence.legacy.user.mapper.class: eZ\Publish\Core\Persistence\Legacy\User\Mapper
-    ezpublish.persistence.legacy.user.gateway.class: eZ\Publish\Core\Persistence\Legacy\User\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.user.gateway.exception_conversion.class: eZ\Publish\Core\Persistence\Legacy\User\Gateway\ExceptionConversion
-    ezpublish.persistence.legacy.role.gateway.class: eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.role.gateway.exception_conversion.class: eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway\ExceptionConversion
-    ezpublish.persistence.legacy.role.limitation.handler.class: eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationHandler
-    ezpublish.persistence.legacy.role.limitation.handler.object_state.class: eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationHandler\ObjectStateHandler
-    ezpublish.persistence.legacy.role.limitation.converter.class: eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationConverter
+    ezpublish.spi.persistence.legacy.user.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Handler
+    ezpublish.persistence.legacy.user.mapper.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Mapper
+    ezpublish.persistence.legacy.user.gateway.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Gateway\DoctrineDatabase
+    ezpublish.persistence.legacy.user.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Gateway\ExceptionConversion
+    ezpublish.persistence.legacy.role.gateway.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\Gateway\DoctrineDatabase
+    ezpublish.persistence.legacy.role.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\Gateway\ExceptionConversion
+    ezpublish.persistence.legacy.role.limitation.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationHandler
+    ezpublish.persistence.legacy.role.limitation.handler.object_state.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationHandler\ObjectStateHandler
+    ezpublish.persistence.legacy.role.limitation.converter.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationConverter
 
 services:
     ezpublish.persistence.legacy.user.gateway.inner:

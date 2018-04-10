@@ -16,17 +16,17 @@ use eZ\Publish\SPI\Persistence\URL\URLUpdateStruct;
  */
 class Handler implements HandlerInterface
 {
-    /** @var \eZ\Publish\Core\Persistence\Legacy\URL\Gateway */
+    /** @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway */
     private $urlGateway;
 
-    /** @var \eZ\Publish\Core\Persistence\Legacy\URL\Mapper */
+    /** @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Mapper */
     private $urlMapper;
 
     /**
      * Handler constructor.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\URL\Gateway $gateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\URL\Mapper $mapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway $gateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Mapper $mapper
      */
     public function __construct(Gateway $gateway, Mapper $mapper)
     {

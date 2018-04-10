@@ -8,9 +8,9 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Update\Handler;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\Update\Handler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Update\Handler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater;
 use eZ\Publish\SPI\Persistence\Content\Type;
 
 /**
@@ -19,22 +19,22 @@ use eZ\Publish\SPI\Persistence\Content\Type;
 class DoctrineDatabase extends Handler
 {
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway
      */
     protected $contentTypeGateway;
 
     /**
      * Content updater.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater
      */
     protected $contentUpdater;
 
     /**
      * Creates a new content type update handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Type\Gateway $contentTypeGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Type\ContentUpdater $contentUpdater
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Gateway $contentTypeGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\ContentUpdater $contentUpdater
      */
     public function __construct(Gateway $contentTypeGateway, ContentUpdater $contentUpdater)
     {

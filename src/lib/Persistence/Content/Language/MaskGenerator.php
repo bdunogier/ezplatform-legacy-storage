@@ -18,7 +18,7 @@ class MaskGenerator
     /**
      * Language lookup.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Handler
      */
     protected $languageHandler;
 

@@ -24,7 +24,7 @@ interface CriterionHandler
      *
      * accept() must be called before calling this method.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\URL\Query\CriteriaConverter $converter
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriteriaConverter $converter
      * @param \eZ\Publish\Core\Persistence\Database\SelectQuery $query
      * @param \eZ\Publish\API\Repository\Values\URL\Query\Criterion $criterion
      * @return \eZ\Publish\Core\Persistence\Database\Expression|string

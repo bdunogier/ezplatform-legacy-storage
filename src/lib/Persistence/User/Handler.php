@@ -15,9 +15,9 @@ use eZ\Publish\SPI\Persistence\User\Role;
 use eZ\Publish\SPI\Persistence\User\RoleCreateStruct;
 use eZ\Publish\SPI\Persistence\User\RoleUpdateStruct;
 use eZ\Publish\SPI\Persistence\User\Policy;
-use eZ\Publish\Core\Persistence\Legacy\Exception\RoleNotFound;
-use eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway as RoleGateway;
-use eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationConverter;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Exception\RoleNotFound;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\Gateway as RoleGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationConverter;
 use eZ\Publish\Core\Base\Exceptions\NotFoundException as NotFound;
 use LogicException;
 
@@ -29,36 +29,36 @@ class Handler implements BaseUserHandler
     /**
      * Gateway for storing user data.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\User\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Gateway
      */
     protected $userGateway;
 
     /**
      * Gateway for storing role data.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\Gateway
      */
     protected $roleGateway;
 
     /**
      * Mapper for user related objects.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\User\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Mapper
      */
     protected $mapper;
 
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationConverter
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationConverter
      */
     protected $limitationConverter;
 
     /**
      * Construct from userGateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\User\Gateway $userGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\User\Role\Gateway $roleGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\User\Mapper $mapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationConverter $limitationConverter
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Gateway $userGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\Gateway $roleGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Mapper $mapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationConverter $limitationConverter
      */
     public function __construct(Gateway $userGateway, RoleGateway $roleGateway, Mapper $mapper, LimitationConverter $limitationConverter)
     {

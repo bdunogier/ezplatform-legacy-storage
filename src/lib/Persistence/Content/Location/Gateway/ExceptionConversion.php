@@ -10,7 +10,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\G
 
 use eZ\Publish\API\Repository\Values\Content\Query;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway;
 use eZ\Publish\SPI\Persistence\Content\Location\UpdateStruct;
 use eZ\Publish\SPI\Persistence\Content\Location\CreateStruct;
 use Doctrine\DBAL\DBALException;
@@ -124,7 +124,7 @@ class ExceptionConversion extends Gateway
     }
 
     /**
-     * @see \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway::loadParentLocationsDataForDraftContent
+     * @see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway::loadParentLocationsDataForDraftContent
      */
     public function loadParentLocationsDataForDraftContent($contentId)
     {

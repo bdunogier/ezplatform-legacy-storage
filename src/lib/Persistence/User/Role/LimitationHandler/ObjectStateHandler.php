@@ -9,7 +9,7 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationHandler;
 
 use eZ\Publish\API\Repository\Values\User\Limitation;
-use eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationHandler;
 use eZ\Publish\SPI\Persistence\User\Policy;
 
 /**

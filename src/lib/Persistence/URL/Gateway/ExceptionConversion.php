@@ -7,7 +7,7 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway;
 
 use eZ\Publish\API\Repository\Values\URL\Query\Criterion;
-use eZ\Publish\Core\Persistence\Legacy\URL\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway;
 use eZ\Publish\SPI\Persistence\URL\URL;
 use Doctrine\DBAL\DBALException;
 use PDOException;
@@ -25,7 +25,7 @@ class ExceptionConversion extends Gateway
     /**
      * ExceptionConversion constructor.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\URL\Gateway $innerGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Gateway $innerGateway
      */
     public function __construct(Gateway $innerGateway)
     {

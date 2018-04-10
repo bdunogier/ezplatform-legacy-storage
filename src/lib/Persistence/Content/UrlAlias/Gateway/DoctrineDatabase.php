@@ -9,11 +9,11 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway;
 
 use Doctrine\DBAL\Connection;
-use eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator as LanguageMaskGenerator;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator as LanguageMaskGenerator;
 use eZ\Publish\Core\Persistence\Database\Query;
-use eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Language;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Language;
 use RuntimeException;
 
 /**
@@ -60,7 +60,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Language mask generator.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator
      */
     protected $languageMaskGenerator;
 
@@ -75,7 +75,7 @@ class DoctrineDatabase extends Gateway
      * Creates a new DoctrineDatabase UrlAlias Gateway.
      *
      * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator $languageMaskGenerator
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator $languageMaskGenerator
      */
     public function __construct(
         DatabaseHandler $dbHandler,

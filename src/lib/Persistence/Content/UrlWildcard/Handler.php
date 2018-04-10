@@ -22,22 +22,22 @@ class Handler implements BaseUrlWildcardHandler
     /**
      * UrlWildcard Gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\UrlWildcard\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway
      */
     protected $gateway;
 
     /**
      * UrlWildcard Mapper.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\UrlWildcard\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Mapper
      */
     protected $mapper;
 
     /**
      * Creates a new UrlWildcard Handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\UrlWildcard\Gateway $gateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\UrlWildcard\Mapper $mapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway $gateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Mapper $mapper
      */
     public function __construct(Gateway $gateway, Mapper $mapper)
     {

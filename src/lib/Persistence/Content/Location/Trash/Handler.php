@@ -10,11 +10,11 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\T
 
 use eZ\Publish\SPI\Persistence\Content\Location\Trashed;
 use eZ\Publish\SPI\Persistence\Content\Location\Trash\Handler as BaseTrashHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Handler as ContentHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Handler as ContentHandler;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler as LocationHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway as LocationGateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper as LocationMapper;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Handler as LocationHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway as LocationGateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper as LocationMapper;
 
 /**
  * The Location Handler interface defines operations on Location elements in the storage engine.
@@ -24,40 +24,40 @@ class Handler implements BaseTrashHandler
     /**
      * Location handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Handler
      */
     protected $locationHandler;
 
     /**
      * Gateway for handling location data.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway
      */
     protected $locationGateway;
 
     /**
      * Mapper for handling location data.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper
      */
     protected $locationMapper;
 
     /**
      * Content handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Handler
      */
     protected $contentHandler;
 
     /**
      * Construct from userGateway.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Handler $locationHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Gateway $locationGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Location\Mapper $locationMapper
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Handler $contentHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Handler $locationHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Gateway $locationGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper $locationMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Handler $contentHandler
      *
-     * @return \eZ\Publish\Core\Persistence\Legacy\Content\Location\Trash\Handler
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Trash\Handler
      */
     public function __construct(
         LocationHandler $locationHandler,

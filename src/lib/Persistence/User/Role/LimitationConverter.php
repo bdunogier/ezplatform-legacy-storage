@@ -18,14 +18,14 @@ use eZ\Publish\SPI\Persistence\User\Policy;
 class LimitationConverter
 {
     /**
-     * @var \eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationHandler[]
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationHandler[]
      */
     protected $limitationHandlers;
 
     /**
      * Construct from LimitationConverter.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationHandler[] $limitationHandlers
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationHandler[] $limitationHandlers
      */
     public function __construct(array $limitationHandlers = array())
     {
@@ -35,7 +35,7 @@ class LimitationConverter
     /**
      * Adds handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\User\Role\LimitationHandler $handler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\User\Role\LimitationHandler $handler
      */
     public function addHandler(LimitationHandler $handler)
     {

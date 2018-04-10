@@ -8,7 +8,7 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Gateway;
 use eZ\Publish\SPI\Persistence\Content\ObjectState;
 use eZ\Publish\SPI\Persistence\Content\ObjectState\Group;
 use Doctrine\DBAL\DBALException;

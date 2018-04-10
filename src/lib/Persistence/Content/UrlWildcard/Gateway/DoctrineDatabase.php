@@ -8,7 +8,7 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\UrlWildcard\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlWildcard\Gateway;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
 use eZ\Publish\SPI\Persistence\Content\UrlWildcard;
 

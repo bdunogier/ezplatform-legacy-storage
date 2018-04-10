@@ -100,7 +100,7 @@ abstract class Gateway
      *
      * @param \eZ\Publish\SPI\Persistence\Content $content
      * @param \eZ\Publish\SPI\Persistence\Content\Field $field
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $value
      *
      * @return int ID
      */
@@ -129,7 +129,7 @@ abstract class Gateway
      * Updates an existing, non-translatable field.
      *
      * @param \eZ\Publish\SPI\Persistence\Content\Field $field
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $value
      * @param int $contentId
      */
     abstract public function updateNonTranslatableField(
@@ -339,7 +339,7 @@ abstract class Gateway
      * @param int $contentVersionNo
      * @param int $relationType
      *
-     * @return mixed[][] Content data, array structured like {@see \eZ\Publish\Core\Persistence\Legacy\Content\Gateway::load()}
+     * @return mixed[][] Content data, array structured like {@see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway::load()}
      */
     abstract public function loadRelations($contentId, $contentVersionNo = null, $relationType = null);
 
@@ -351,7 +351,7 @@ abstract class Gateway
      * @param int $contentVersionNo
      * @param int $relationType
      *
-     * @return mixed[][] Content data, array structured like {@see \eZ\Publish\Core\Persistence\Legacy\Content\Gateway::load()}
+     * @return mixed[][] Content data, array structured like {@see \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Gateway::load()}
      */
     abstract public function loadReverseRelations($contentId, $relationType = null);
 

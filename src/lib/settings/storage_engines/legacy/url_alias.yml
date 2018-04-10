@@ -1,8 +1,8 @@
 parameters:
-    ezpublish.spi.persistence.legacy.url_alias.handler.class: eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Handler
-    ezpublish.persistence.legacy.url_alias.mapper.class: eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Mapper
-    ezpublish.persistence.legacy.url_alias.gateway.class: eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Gateway\DoctrineDatabase
-    ezpublish.persistence.legacy.url_alias.gateway.exception_conversion.class: eZ\Publish\Core\Persistence\Legacy\Content\UrlAlias\Gateway\ExceptionConversion
+    ezpublish.spi.persistence.legacy.url_alias.handler.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Handler
+    ezpublish.persistence.legacy.url_alias.mapper.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Mapper
+    ezpublish.persistence.legacy.url_alias.gateway.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway\DoctrineDatabase
+    ezpublish.persistence.legacy.url_alias.gateway.exception_conversion.class: EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\UrlAlias\Gateway\ExceptionConversion
 
 services:
     ezpublish.persistence.legacy.url_alias.gateway.inner:

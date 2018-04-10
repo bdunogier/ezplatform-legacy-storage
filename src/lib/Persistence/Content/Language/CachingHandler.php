@@ -20,14 +20,14 @@ class CachingHandler implements BaseLanguageHandler
     /**
      * Inner Language handler.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\Handler
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Handler
      */
     protected $innerHandler;
 
     /**
      * Language cache.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\Cache
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\Cache
      */
     protected $languageCache;
 

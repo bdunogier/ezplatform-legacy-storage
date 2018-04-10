@@ -8,8 +8,8 @@
  */
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Gateway;
 
-use eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Gateway;
-use eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Gateway;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
 use eZ\Publish\SPI\Persistence\Content\ObjectState;
 use eZ\Publish\SPI\Persistence\Content\ObjectState\Group;
@@ -29,7 +29,7 @@ class DoctrineDatabase extends Gateway
     /**
      * Language mask generator.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator
      */
     protected $maskGenerator;
 
@@ -37,7 +37,7 @@ class DoctrineDatabase extends Gateway
      * Creates a new Doctrine database ObjectState Gateway.
      *
      * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Language\MaskGenerator $maskGenerator
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator $maskGenerator
      */
     public function __construct(DatabaseHandler $dbHandler, MaskGenerator $maskGenerator)
     {

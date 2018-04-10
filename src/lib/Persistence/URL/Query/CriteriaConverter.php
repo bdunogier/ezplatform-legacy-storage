@@ -15,14 +15,14 @@ class CriteriaConverter
     /**
      * Criterion handlers.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\URL\Query\CriterionHandler[]
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler[]
      */
     protected $handlers;
 
     /**
      * Construct from an optional array of Criterion handlers.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\URL\Query\CriterionHandler[] $handlers
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler[] $handlers
      */
     public function __construct(array $handlers = [])
     {
@@ -32,7 +32,7 @@ class CriteriaConverter
     /**
      * Adds handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\URL\Query\CriterionHandler $handler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\URL\Query\CriterionHandler $handler
      */
     public function addHandler(CriterionHandler $handler)
     {

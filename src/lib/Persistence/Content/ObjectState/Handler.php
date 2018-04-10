@@ -20,22 +20,22 @@ class Handler implements BaseObjectStateHandler
     /**
      * ObjectState Gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Gateway
      */
     protected $objectStateGateway;
 
     /**
      * ObjectState Mapper.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Mapper
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Mapper
      */
     protected $objectStateMapper;
 
     /**
      * Creates a new ObjectState Handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Gateway $objectStateGateway
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\ObjectState\Mapper $objectStateMapper
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Gateway $objectStateGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\ObjectState\Mapper $objectStateMapper
      */
     public function __construct(Gateway $objectStateGateway, Mapper $objectStateMapper)
     {

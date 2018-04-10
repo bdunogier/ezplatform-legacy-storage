@@ -9,8 +9,8 @@
 namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence;
 
 use eZ\Publish\SPI\Persistence\TransactionHandler as TransactionHandlerInterface;
-use eZ\Publish\Core\Persistence\Legacy\Content\Type\MemoryCachingHandler as CachingContentTypeHandler;
-use eZ\Publish\Core\Persistence\Legacy\Content\Language\CachingHandler as CachingLanguageHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\MemoryCachingHandler as CachingContentTypeHandler;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\CachingHandler as CachingLanguageHandler;
 use eZ\Publish\Core\Persistence\Database\DatabaseHandler;
 use Exception;
 use RuntimeException;
@@ -39,8 +39,8 @@ class TransactionHandler implements TransactionHandlerInterface
 
     /**
      * @param \eZ\Publish\Core\Persistence\Database\DatabaseHandler $dbHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Type\MemoryCachingHandler $contentTypeHandler
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Language\CachingHandler $languageHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\MemoryCachingHandler $contentTypeHandler
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\CachingHandler $languageHandler
      */
     public function __construct(
         DatabaseHandler $dbHandler,

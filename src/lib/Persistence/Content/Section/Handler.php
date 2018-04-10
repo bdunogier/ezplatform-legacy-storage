@@ -21,14 +21,14 @@ class Handler implements BaseSectionHandler
     /**
      * Section Gateway.
      *
-     * @var \eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway
+     * @var \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway
      */
     protected $sectionGateway;
 
     /**
      * Creates a new Section Handler.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\Section\Gateway $sectionGateway
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Section\Gateway $sectionGateway
      */
     public function __construct(Gateway $sectionGateway)
     {

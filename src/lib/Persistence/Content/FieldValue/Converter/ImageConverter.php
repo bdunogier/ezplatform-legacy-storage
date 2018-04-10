@@ -10,7 +10,7 @@ namespace EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\FieldValue
 
 use eZ\Publish\Core\IO\IOServiceInterface;
 use eZ\Publish\Core\IO\UrlRedecoratorInterface;
-use eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue;
 use eZ\Publish\SPI\Persistence\Content\FieldValue;
 
 class ImageConverter extends BinaryFileConverter
@@ -31,7 +31,7 @@ class ImageConverter extends BinaryFileConverter
      * Converts data from $value to $storageFieldValue.
      *
      * @param \eZ\Publish\SPI\Persistence\Content\FieldValue $value
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $storageFieldValue
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $storageFieldValue
      */
     public function toStorageValue(FieldValue $value, StorageFieldValue $storageFieldValue)
     {
@@ -153,7 +153,7 @@ EOT;
     /**
      * Converts data from $value to $fieldValue.
      *
-     * @param \eZ\Publish\Core\Persistence\Legacy\Content\StorageFieldValue $value
+     * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\StorageFieldValue $value
      * @param \eZ\Publish\SPI\Persistence\Content\FieldValue $fieldValue
      */
     public function toFieldValue(StorageFieldValue $value, FieldValue $fieldValue)
