@@ -11,7 +11,6 @@ namespace EzSystems\EzPlatformLegacyStorageEngineBundle;
 use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\Compiler\Storage\Legacy\FieldValueConverterRegistryPass;
 use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\Compiler\Storage\Legacy\RoleLimitationConverterPass;
 use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\EzPlatformLegacyStorageExtension;
-use EzSystems\EzPlatformRichTextBundle\DependencyInjection\Configuration\Parser\FieldType\RichText;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
