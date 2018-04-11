@@ -29,9 +29,16 @@ class EzPlatformLegacyStorageExtension extends Extension
             $container,
             new FileLocator(__DIR__ . '/../../lib/settings')
         );
-
         $loader->load('storage_engines/legacy.yml');
         $loader->load('search_engines/legacy.yml');
+
+        if ($container->hasExtension('ezpublish')) {
+            $loader = new Loader\YamlFileLoader(
+                $container,
+                new FileLocator(__DIR__ . '/../Resources/config')
+            );
+            $loader->load('legacy_search.yml');
+        }
     }
 
     public function getConfiguration(array $config, ContainerBuilder $container)

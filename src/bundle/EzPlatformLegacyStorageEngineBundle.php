@@ -8,8 +8,7 @@ declare(strict_types=1);
 
 namespace EzSystems\EzPlatformLegacyStorageEngineBundle;
 
-use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\Compiler\Storage\Legacy\FieldValueConverterRegistryPass;
-use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\Compiler\Storage\Legacy\RoleLimitationConverterPass;
+use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\Compiler;
 use EzSystems\EzPlatformLegacyStorageEngineBundle\DependencyInjection\EzPlatformLegacyStorageExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -23,8 +22,12 @@ class EzPlatformLegacyStorageEngineBundle extends Bundle
     {
         parent::build($container);
         
-        $container->addCompilerPass(new FieldValueConverterRegistryPass());
-        $container->addCompilerPass(new RoleLimitationConverterPass());
+        $container->addCompilerPass(new Compiler\Storage\FieldValueConverterRegistryPass());
+        $container->addCompilerPass(new Compiler\Storage\RoleLimitationConverterPass());
+
+        $container->addCompilerPass(new Compiler\Search\CriteriaConverterPass());
+        $container->addCompilerPass(new Compiler\Search\CriterionFieldValueHandlerRegistryPass());
+        $container->addCompilerPass(new Compiler\Search\SortClauseConverterPass());
     }
 
     public function getContainerExtension()
