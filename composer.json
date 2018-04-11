@@ -1,6 +1,6 @@
 {
     "name": "ezsystems/ezplatform-legacy-storage-engine",
-    "description": "eZ Platform Legacy Storage Engine Extension. Stores eZ Platform Repository data using the storage engine from the legacy eZ Publish.",
+    "description": "eZ Platform Legacy Storage Extension. Uses the eZ Publish legacy database to persist and search for repository data.",
     "homepage": "https://ezplatform.com",
     "license": "GPL-2.0-only",
     "type": "ezplatform-bundle",
