@@ -8,10 +8,11 @@
  */
 namespace EzSystems\Tests\EzPlatformLegacyStorageEngine\Persistence\Content;
 
+use EzSystems\EzPlatformLegacyStorageEngine\Search\Content\Mapper\FullTextMapper;
 use EzSystems\Tests\EzPlatformLegacyStorageEngine\Persistence\TestCase;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Language\MaskGenerator as LanguageMaskGenerator;
-use eZ\Publish\Core\Persistence;
-use eZ\Publish\Core\Search\Legacy\Content\Mapper\FullTextMapper;
+use EzSystems\EzPlatformLegacyStorageEngine\Persistence;
+use eZ\Publish\Core\Persistence as CorePersistence;
 use eZ\Publish\Core\Search\Common\FieldNameGenerator;
 use eZ\Publish\Core\Search\Common\FieldRegistry;
 
@@ -67,14 +68,14 @@ abstract class LanguageAwareTestCase extends TestCase
     /**
      * Return definition-based transformation processor instance.
      *
-     * @return Persistence\TransformationProcessor\DefinitionBased
+     * @return CorePersistence\TransformationProcessor\DefinitionBased
      */
     protected function getDefinitionBasedTransformationProcessor()
     {
-        return new Persistence\TransformationProcessor\DefinitionBased(
-            new Persistence\TransformationProcessor\DefinitionBased\Parser(),
-            new Persistence\TransformationProcessor\PcreCompiler(
-                new Persistence\Utf8Converter()
+        return new CorePersistence\TransformationProcessor\DefinitionBased(
+            new CorePersistence\TransformationProcessor\DefinitionBased\Parser(),
+            new CorePersistence\TransformationProcessor\PcreCompiler(
+                new CorePersistence\Utf8Converter()
             ),
             glob(__DIR__ . '/../../../../Persistence/Tests/TransformationProcessor/_fixtures/transformations/*.tr')
         );
@@ -99,9 +100,9 @@ abstract class LanguageAwareTestCase extends TestCase
 
     /**
      * @param \EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Handler $contentTypeHandler
-     * @return \eZ\Publish\Core\Search\Legacy\Content\Mapper\FullTextMapper
+     * @return \EzSystems\EzPlatformLegacyStorageEngine\Search\Content\Mapper\FullTextMapper
      */
-    protected function getFullTextMapper(Persistence\Legacy\Content\Type\Handler $contentTypeHandler)
+    protected function getFullTextMapper(Persistence\Content\Type\Handler $contentTypeHandler)
     {
         return new FullTextMapper(
             $this->createMock(FieldRegistry::class),

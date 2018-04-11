@@ -18,6 +18,9 @@
     <testsuite name="Doctrine">
       <directory>tests/lib/Doctrine</directory>
     </testsuite>
+    <testsuite name="LegacySearch">
+      <directory>tests/lib/Search</directory>
+    </testsuite>
   </testsuites>
   <filter>
     <whitelist>

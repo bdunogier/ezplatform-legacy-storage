@@ -6,9 +6,8 @@
  * @copyright Copyright (C) eZ Systems AS. All rights reserved.
  * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
-namespace EzSystems\EzPlatformLegacyStorageEngine\Search\Tests\Content;
+namespace EzSystems\Tests\EzPlatformLegacyStorageEngine\Search\Content;
 
-use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Tests\Content\LanguageAwareTestCase;
 use EzSystems\EzPlatformLegacyStorageEngine\Search\Content;
 use eZ\Publish\SPI\Persistence\Content\Location as SPILocation;
 use eZ\Publish\API\Repository\Values\Content\LocationQuery;
@@ -29,6 +28,7 @@ use EzSystems\EzPlatformLegacyStorageEngine\Search\Content\Gateway as ContentGat
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Mapper as ContentMapper;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Type\Update\Handler as ContentTypeUpdateHandler;
 use EzSystems\EzPlatformLegacyStorageEngine\Persistence\Content\Location\Mapper as LocationMapper;
+use EzSystems\Tests\EzPlatformLegacyStorageEngine\Persistence\Content\LanguageAwareTestCase;
 
 /**
  * Location Search test case for ContentSearchHandler.
