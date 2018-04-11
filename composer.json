@@ -24,7 +24,7 @@
         "psr-4": {
             "EzSystems\\Tests\\EzPlatformLegacyStorageEngine\\": "tests/lib",
             "EzSystems\\Tests\\EzPlatformLegacyStorageEngineBundle\\": "tests/bundle",
-            "EzSystems\\IntegrationTests\\EzPlatformEzPlatformLegacyStorageEngine\\": "tests/integration"
+            "EzSystems\\IntegrationTests\\EzPlatformLegacyStorageEngine\\": "tests/integration"
         }
     },
     "scripts": {

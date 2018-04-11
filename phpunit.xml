@@ -1,19 +1,32 @@
 <phpunit
-    bootstrap="bootstrap.php"
-    backupGlobals="false"
-    backupStaticAttributes="false"
-    convertErrorsToExceptions="true"
-    convertNoticesToExceptions="true"
-    convertWarningsToExceptions="true"
-    beStrictAboutTestsThatDoNotTestAnything="false"
-    colors="true"
->
+  backupGlobals="false"
+  backupStaticAttributes="false"
+  bootstrap="bootstrap.php"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  beStrictAboutTestsThatDoNotTestAnything="false"
+  colors="true"
+  >
+  <php>
+    <ini name="error_reporting" value="-1" />
+  </php>
   <testsuites>
-    <testsuite name="ezrichtext_field_type">
-      <directory>tests/lib</directory>
-      <exclude>
-        <directory>tests/lib/eZ/API</directory>
-      </exclude>
+    <testsuite name="LegacyStorage">
+      <directory>tests/lib/Persistence</directory>
+    </testsuite>
+    <testsuite name="Doctrine">
+      <directory>tests/lib/Doctrine</directory>
     </testsuite>
   </testsuites>
+  <filter>
+    <whitelist>
+      <directory suffix=".php">eZ</directory>
+      <exclude>
+          <directory>tests/</directory>
+          <directory>docs</directory>
+          <directory>vendor</directory>
+      </exclude>
+    </whitelist>
+  </filter>
 </phpunit>
